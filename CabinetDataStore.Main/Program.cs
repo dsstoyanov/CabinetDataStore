@@ -26,7 +26,7 @@ namespace CabinetDataStore.Main
             IPatient patients = kernel.Get<IPatient>();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(patients));
+            Application.Run(new PatientForm(patients));
         }
     }
 }

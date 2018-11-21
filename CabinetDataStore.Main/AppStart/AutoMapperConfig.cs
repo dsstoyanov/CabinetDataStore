@@ -23,7 +23,9 @@ namespace CabinetDataStore.Main.AppStart
         {
             public PatientsProfile()
             {
-                CreateMap<PatientData, PatientModel>();
+                CreateMap<PatientData, PatientModel>()
+                    .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDay))
+                    .ForMember(dest => dest.EmailAddress, opt => opt.MapFrom(src => src.email));
             }
         }
     }
