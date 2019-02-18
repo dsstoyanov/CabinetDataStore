@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CabinetDataStore.BusinessService.ExaminationModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,5 +18,7 @@ namespace CabinetDataStore.BusinessService.PatientModels
         public DateTime BirthDate { get; set; }
 
         public string EmailAddress { get; set; }
+
+        public List<ExaminationModel> Examinations { get; set; }
     }
 }

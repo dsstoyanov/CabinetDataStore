@@ -41,11 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\SearchTypes.cs" />
+    <Compile Include="ExaminationModels\ExaminationModel.cs" />
     <Compile Include="PatientModels\PatientModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ExaminationModels\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

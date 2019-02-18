@@ -32,7 +32,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpPatientData = new System.Windows.Forms.GroupBox();
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -45,7 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.srchButton = new System.Windows.Forms.Button();
             this.txtFilter = new System.Windows.Forms.TextBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtFilterDate = new System.Windows.Forms.DateTimePicker();
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -64,7 +64,8 @@
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.grpPatientData.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -110,25 +111,26 @@
             this.button3.Text = "Добави нов пациент";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpPatientData
             // 
-            this.groupBox1.Controls.Add(this.dtBirthDate);
-            this.groupBox1.Controls.Add(this.txtAge);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtPatientPhone);
-            this.groupBox1.Controls.Add(this.txtPatientName);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 120);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(591, 149);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Пациент";
+            this.grpPatientData.Controls.Add(this.button1);
+            this.grpPatientData.Controls.Add(this.dtBirthDate);
+            this.grpPatientData.Controls.Add(this.txtAge);
+            this.grpPatientData.Controls.Add(this.txtEmail);
+            this.grpPatientData.Controls.Add(this.txtPatientPhone);
+            this.grpPatientData.Controls.Add(this.txtPatientName);
+            this.grpPatientData.Controls.Add(this.label6);
+            this.grpPatientData.Controls.Add(this.label5);
+            this.grpPatientData.Controls.Add(this.label4);
+            this.grpPatientData.Controls.Add(this.label1);
+            this.grpPatientData.Controls.Add(this.label2);
+            this.grpPatientData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.grpPatientData.Location = new System.Drawing.Point(12, 120);
+            this.grpPatientData.Name = "grpPatientData";
+            this.grpPatientData.Size = new System.Drawing.Size(591, 149);
+            this.grpPatientData.TabIndex = 21;
+            this.grpPatientData.TabStop = false;
+            this.grpPatientData.Text = "Пациент";
             // 
             // dtBirthDate
             // 
@@ -230,7 +232,7 @@
             // 
             // srchButton
             // 
-            this.srchButton.Location = new System.Drawing.Point(342, 77);
+            this.srchButton.Location = new System.Drawing.Point(329, 77);
             this.srchButton.Name = "srchButton";
             this.srchButton.Size = new System.Drawing.Size(95, 23);
             this.srchButton.TabIndex = 15;
@@ -241,21 +243,21 @@
             // txtFilter
             // 
             this.txtFilter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.txtFilter.Location = new System.Drawing.Point(177, 22);
+            this.txtFilter.Location = new System.Drawing.Point(177, 21);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtFilter.Size = new System.Drawing.Size(275, 22);
             this.txtFilter.TabIndex = 19;
             // 
-            // dateTimePicker2
+            // dtFilterDate
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(177, 21);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker2.Size = new System.Drawing.Size(194, 22);
-            this.dateTimePicker2.TabIndex = 26;
-            this.dateTimePicker2.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFilterDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFilterDate.Location = new System.Drawing.Point(177, 21);
+            this.dtFilterDate.Name = "dtFilterDate";
+            this.dtFilterDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtFilterDate.Size = new System.Drawing.Size(194, 22);
+            this.dtFilterDate.TabIndex = 26;
+            this.dtFilterDate.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             // 
             // comboFilter
             // 
@@ -265,16 +267,17 @@
             "Име",
             "Телефон",
             "Дата на раждане"});
-            this.comboFilter.Location = new System.Drawing.Point(26, 21);
+            this.comboFilter.Location = new System.Drawing.Point(6, 21);
             this.comboFilter.Name = "comboFilter";
-            this.comboFilter.Size = new System.Drawing.Size(145, 24);
+            this.comboFilter.Size = new System.Drawing.Size(165, 24);
             this.comboFilter.TabIndex = 30;
+            this.comboFilter.SelectedIndexChanged += new System.EventHandler(this.comboFilter_SelectedIndexChanged);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.comboFilter);
             this.groupBox4.Controls.Add(this.txtFilter);
-            this.groupBox4.Controls.Add(this.dateTimePicker2);
+            this.groupBox4.Controls.Add(this.dtFilterDate);
             this.groupBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox4.Location = new System.Drawing.Point(286, 12);
@@ -299,7 +302,7 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AllowUserToResizeColumns = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -321,6 +324,8 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(1067, 186);
             this.dataGridView2.TabIndex = 11;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
+            this.dataGridView2.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -458,7 +463,16 @@
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Visible = false;
             // 
-            // Form1
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(367, 103);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(204, 34);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Добави преглед за деня";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -471,12 +485,12 @@
             this.Controls.Add(this.srchButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Controls.Add(this.grpPatientData);
+            this.Name = "PatientForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.PatientForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grpPatientData.ResumeLayout(false);
+            this.grpPatientData.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -493,10 +507,10 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpPatientData;
         private System.Windows.Forms.Button srchButton;
         private System.Windows.Forms.TextBox txtFilter;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtFilterDate;
         private System.Windows.Forms.ComboBox comboFilter;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -525,6 +539,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.Button button1;
     }
 }
 

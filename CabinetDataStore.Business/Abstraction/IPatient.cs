@@ -13,5 +13,7 @@ namespace CabinetDataStore.Business.Abstraction
         List<PatientModel> GetAllPatients();
 
         List<PatientModel> GetPatientByFilter(SearchTypes srchType, object value);
+
+        PatientModel GetPatientById(int patientId);
     }
 }

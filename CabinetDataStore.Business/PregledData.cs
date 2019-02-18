@@ -29,6 +29,8 @@ namespace CabinetDataStore.Business
         public string Rezultati { get; set; }
         public string Terapiq { get; set; }
         public string Preporuki { get; set; }
+        public string Diagnoza { get; set; }
+        public byte[] Snimka { get; set; }
     
         public virtual PatientData PatientData { get; set; }
     }

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CabinetDataStore.Business.Abstraction;
 using CabinetDataStore.BusinessService.Enums;
+using CabinetDataStore.BusinessService.ExaminationModels;
 using CabinetDataStore.BusinessService.PatientModels;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace CabinetDataStore.Business.Services
             using (CabinetEntities context = new CabinetEntities())
             {
                 List<PatientData> Patient = new List<PatientData>();
-                switch(srchType)
+                switch (srchType)
                 {
                     case SearchTypes.Name:
                         Patient = context.PatientDatas.Where(x => x.PatientName == (string)value).ToList();
@@ -39,13 +40,24 @@ namespace CabinetDataStore.Business.Services
                         break;
 
                     case SearchTypes.DateOfBirth:
-                        Patient = context.PatientDatas.Where(x => x.BirthDay == (DateTime)value).ToList();
+                        Patient = context.PatientDatas.Where(x => x.BirthDay.ToString() == (string)value).ToList();
                         break;
 
-                    default: break;
+                    default: Patient = null;
+                        break;
                 }
-
+                
                 return Mapper.Map<List<PatientModel>>(Patient);
+            }
+        }
+
+        public PatientModel GetPatientById(int patientId)
+        {
+            using (CabinetEntities context = new CabinetEntities())
+            {
+                var Patient = context.PatientDatas.Where(x => x.PatientId == patientId).FirstOrDefault();
+
+                return Mapper.Map<PatientModel>(Patient);
             }
         }
     }

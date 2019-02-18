@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="KabinetDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="KabinetDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="PatientData">
           <Key>
             <PropertyRef Name="PatientId" />
@@ -34,6 +34,8 @@
           <Property Name="Rezultati" Type="text" />
           <Property Name="Terapiq" Type="text" />
           <Property Name="Preporuki" Type="text" />
+          <Property Name="Diagnoza" Type="text" />
+          <Property Name="Snimka" Type="image" />
         </EntityType>
         <Association Name="FK_PregledData_PatientData">
           <End Role="PatientData" Type="Self.PatientData" Multiplicity="1" />
@@ -55,8 +57,7 @@
             <End Role="PregledData" EntitySet="PregledData" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="KabinetDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -91,6 +92,8 @@
           <Property Name="Terapiq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="Preporuki" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="PatientData" Relationship="Self.FK_PregledData_PatientData" FromRole="PregledData" ToRole="PatientData" />
+          <Property Name="Diagnoza" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Snimka" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_PregledData_PatientData">
           <End Role="PatientData" Type="Self.PatientData" Multiplicity="1" />
@@ -132,6 +135,8 @@
           <EntitySetMapping Name="PregledDatas">
             <EntityTypeMapping TypeName="KabinetDbModel.PregledData">
               <MappingFragment StoreEntitySet="PregledData">
+                <ScalarProperty Name="Snimka" ColumnName="Snimka" />
+                <ScalarProperty Name="Diagnoza" ColumnName="Diagnoza" />
                 <ScalarProperty Name="PregledId" ColumnName="PregledId" />
                 <ScalarProperty Name="PatientId" ColumnName="PatientId" />
                 <ScalarProperty Name="PregledDate" ColumnName="PregledDate" />
