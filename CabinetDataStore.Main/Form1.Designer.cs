@@ -53,7 +53,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.PatientNametxt = new System.Windows.Forms.TextBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -319,14 +319,14 @@
             this.textBox3.Size = new System.Drawing.Size(125, 20);
             this.textBox3.TabIndex = 20;
             // 
-            // textBox2
+            // PatientNametxt
             // 
-            this.textBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.textBox2.Location = new System.Drawing.Point(238, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(275, 20);
-            this.textBox2.TabIndex = 19;
+            this.PatientNametxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.PatientNametxt.Location = new System.Drawing.Point(238, 60);
+            this.PatientNametxt.Name = "PatientNametxt";
+            this.PatientNametxt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.PatientNametxt.Size = new System.Drawing.Size(275, 20);
+            this.PatientNametxt.TabIndex = 19;
             // 
             // radioButton3
             // 
@@ -384,7 +384,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.PatientNametxt);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -428,7 +428,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox PatientNametxt;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;

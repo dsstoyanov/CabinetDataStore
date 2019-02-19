@@ -32,9 +32,9 @@ namespace CabinetDataStore.Main
             var dbpatients = patientService.GetAllPatients();
             var patients = dbpatients.Select(x => x.PatientName).ToArray();
             {
-                textBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                textBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                textBox1.AutoCompleteCustomSource.AddRange(patients);
+                PatientNametxt.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                PatientNametxt.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                PatientNametxt.AutoCompleteCustomSource.AddRange(patients);
             }
         }
         #endregion
