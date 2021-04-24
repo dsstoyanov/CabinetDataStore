@@ -1,4 +1,5 @@
-﻿using CabinetDataStore.BusinessService.PatientModels;
+﻿using CabinetDataStore.BusinessService.Enums;
+using CabinetDataStore.BusinessService.PatientModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,11 @@ namespace CabinetDataStore.Business.Abstraction
     public interface IPatient
     {
         List<PatientModel> GetAllPatients();
+
+        List<PatientModel> GetPatientByFilter(SearchTypes srchType, object value);
+
+        PatientModel GetPatientById(long patientId);
+
+        bool InsertPatient (PatientModel patient);
     }
 }

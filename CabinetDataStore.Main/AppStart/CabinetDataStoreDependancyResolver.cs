@@ -14,6 +14,7 @@ namespace CabinetDataStore.Main.AppStart
         public override void Load()
         {
             Bind<IPatient>().To<PatientService>();
+            Bind<IExamination>().To<ExaminationService>();
         }
     }
 }
