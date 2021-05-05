@@ -21,7 +21,6 @@ namespace CabinetDataStore.Main
         [STAThread]
         static void Main()
         {
-            var asd = ConfigurationManager.ConnectionStrings["CabinetContext"].ConnectionString;
             AutoMapperConfig.Register();
 
             IKernel kernel = new StandardKernel();
@@ -29,8 +28,9 @@ namespace CabinetDataStore.Main
 
             IPatient patients = kernel.Get<IPatient>();
             IExamination examinations = kernel.Get<IExamination>();
+            
 
-           
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new PatientForm(patients, examinations));

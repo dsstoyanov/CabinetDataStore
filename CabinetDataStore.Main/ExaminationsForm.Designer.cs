@@ -243,6 +243,7 @@
             this.btnClearPic.Text = "Изчисти";
             this.btnClearPic.UseVisualStyleBackColor = true;
             this.btnClearPic.Visible = false;
+            this.btnClearPic.Click += new System.EventHandler(this.btnClearPic_Click);
             // 
             // btnChoosePic
             // 

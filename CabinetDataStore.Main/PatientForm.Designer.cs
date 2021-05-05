@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRefusal = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnNewPatient = new System.Windows.Forms.Button();
             this.grpPatientData = new System.Windows.Forms.GroupBox();
             this.addNewExamButton = new System.Windows.Forms.Button();
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
@@ -64,45 +64,47 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).BeginInit();
             this.SuspendLayout();
             // 
-            // button8
+            // btnRefusal
             // 
-            this.button8.Enabled = false;
-            this.button8.Location = new System.Drawing.Point(945, 534);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 28;
-            this.button8.Text = "Отказ";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnRefusal.Enabled = false;
+            this.btnRefusal.Location = new System.Drawing.Point(945, 534);
+            this.btnRefusal.Name = "btnRefusal";
+            this.btnRefusal.Size = new System.Drawing.Size(75, 23);
+            this.btnRefusal.TabIndex = 28;
+            this.btnRefusal.Text = "Отказ";
+            this.btnRefusal.UseVisualStyleBackColor = true;
+            this.btnRefusal.Click += new System.EventHandler(this.btnRefusal_Click);
             // 
-            // button7
+            // btnEdit
             // 
-            this.button7.Location = new System.Drawing.Point(722, 534);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(81, 23);
-            this.button7.TabIndex = 27;
-            this.button7.Text = "Редактирай";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnEdit.Location = new System.Drawing.Point(722, 534);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(81, 23);
+            this.btnEdit.TabIndex = 27;
+            this.btnEdit.Text = "Редактирай";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // button4
+            // btnSave
             // 
-            this.button4.Enabled = false;
-            this.button4.Location = new System.Drawing.Point(1026, 534);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 23);
-            this.button4.TabIndex = 24;
-            this.button4.Text = "Запис";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSave.Enabled = false;
+            this.btnSave.Location = new System.Drawing.Point(1026, 534);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 23);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Запис";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button3
+            // btnNewPatient
             // 
-            this.button3.Location = new System.Drawing.Point(809, 534);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 23);
-            this.button3.TabIndex = 23;
-            this.button3.Text = "Добави нов пациент";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnNewPatient.Location = new System.Drawing.Point(809, 534);
+            this.btnNewPatient.Name = "btnNewPatient";
+            this.btnNewPatient.Size = new System.Drawing.Size(131, 23);
+            this.btnNewPatient.TabIndex = 23;
+            this.btnNewPatient.Text = "Добави нов пациент";
+            this.btnNewPatient.UseVisualStyleBackColor = true;
+            this.btnNewPatient.Click += new System.EventHandler(this.btnNewPatient_Click);
             // 
             // grpPatientData
             // 
@@ -374,11 +376,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnRefusal);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.srchButton);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.grpPatientData);
             this.Name = "PatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -400,10 +402,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRefusal;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnNewPatient;
         private System.Windows.Forms.GroupBox grpPatientData;
         private System.Windows.Forms.Button srchButton;
         private System.Windows.Forms.TextBox txtFilter;

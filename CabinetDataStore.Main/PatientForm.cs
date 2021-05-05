@@ -60,7 +60,7 @@ namespace CabinetDataStore.Main
             dtExamination.Columns.Add("Пациент", typeof(string));
             dtExamination.Columns.Add("Дата на прегледа", typeof(string));
             dtExamination.Columns.Add("Пациент ID", typeof(string));
-            
+
 
             RefreshDailyExaminations();
 
@@ -112,9 +112,9 @@ namespace CabinetDataStore.Main
             else if (PatientData.Count != 0 && PatientData.Count > 1)
             {
 
-                ChoosePatient choose = new ChoosePatient(this,PatientData, patientService,examinationService);
+                ChoosePatient choose = new ChoosePatient(this, PatientData, patientService, examinationService);
                 choose.ShowDialog();
-               
+
             }
         }
 
@@ -140,6 +140,7 @@ namespace CabinetDataStore.Main
 
         public void АutoCompleteInsert()
         {
+            this.txtFilter.AutoCompleteCustomSource = null;
             var dbpatients = patientService.GetAllPatients();
             var patients = dbpatients.Select(x => x.PatientName).ToArray();
 
@@ -222,7 +223,7 @@ namespace CabinetDataStore.Main
 
         #endregion
 
-      
+
 
         private void addNewExamButton_Click(object sender, EventArgs e)
         {
@@ -235,13 +236,10 @@ namespace CabinetDataStore.Main
             //this.Hide();
             ExaminationsForm pf = new ExaminationsForm(patient, patientService, examinationService);
             pf.ShowDialog();
-            
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
 
         }
+
+
 
         private void dgvDaily_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -257,7 +255,7 @@ namespace CabinetDataStore.Main
 
                 var examination = examinationService.GetExaminationById(ExaminationId);
                 dt.Clear();
-               
+
                 ExaminationsForm f = new ExaminationsForm(patient, examination, patientService, examinationService, true);
                 f.ShowDialog();
             }
@@ -290,7 +288,7 @@ namespace CabinetDataStore.Main
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnNewPatient_Click(object sender, EventArgs e)
         {
             AddPatient f = new AddPatient(patientService);
             f.ShowDialog();
@@ -352,6 +350,78 @@ namespace CabinetDataStore.Main
             dgvDaily.Columns["Пациент ID"].Width = 1;
             this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
             АutoCompleteInsert();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(pID.Text))
+            {
+                MessageBox.Show("Моля първо изберете пациент, чийто данни да редактирате", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            btnEdit.Enabled = false;
+            btnNewPatient.Enabled = false;
+            EnableButtons();
+
+            
+            
+        }
+
+        private void EnableButtons()
+        {
+            txtPatientName.Enabled = true;
+            txtPatientPhone.Enabled = true;
+            txtEmail.Enabled = true;
+            dtBirthDate.Enabled = true;
+            btnSave.Enabled = true;
+            btnRefusal.Enabled = true;
+        }
+
+        private void DisableButtons()
+        {
+            txtPatientName.Enabled = false;
+            txtPatientPhone.Enabled = false;
+            txtEmail.Enabled = false;
+            dtBirthDate.Enabled = false;
+            btnSave.Enabled = false;
+            btnRefusal.Enabled = false;
+        }
+
+        private void btnRefusal_Click(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = true;
+            btnNewPatient.Enabled = true;
+            DisableButtons();
+            var patient = patientService.GetPatientById(int.Parse(pID.Text));
+
+            txtPatientName.Text = patient.PatientName;
+            txtPatientPhone.Text = patient.PhoneNumber;
+            txtEmail.Text = patient.EmailAddress;
+            dtBirthDate.Text = patient.BirthDate.ToString();
+            txtAge.Text = AgeCalculator(patient.BirthDate).ToString();
+            pID.Text = patient.PatientId.ToString();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = true;
+            btnNewPatient.Enabled = true;
+            DisableButtons();
+            PatientModel model = new PatientModel();
+            model.PatientName = txtPatientName.Text;
+            model.PhoneNumber = txtPatientPhone.Text;
+            model.EmailAddress = txtEmail.Text;
+            model.BirthDate = Convert.ToDateTime(dtBirthDate.Text);
+            model.PatientId = int.Parse(pID.Text);
+            txtAge.Text = AgeCalculator(model.BirthDate).ToString();
+
+            bool updatePatient = patientService.UpdatePatient(model);
+            if (updatePatient)
+            {
+                АutoCompleteInsert();
+                MessageBox.Show("Промените бяха записани успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

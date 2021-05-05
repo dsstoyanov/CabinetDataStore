@@ -11,7 +11,9 @@ namespace CabinetDataStore.Business.CabinetDataStoreContext
 {
     public partial class CabinetEntities : DbContext
     {
-        public CabinetEntities() : base("server=localhost;user id=postgres;password=1qaz!QAZ;database=AG_Kabinet")
+        public static string connString = ConfigurationManager.ConnectionStrings["CabinetContext"].ConnectionString;
+        
+        public CabinetEntities() : base(connString)
         {
         }
        

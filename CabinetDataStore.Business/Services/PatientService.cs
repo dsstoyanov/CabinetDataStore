@@ -85,5 +85,28 @@ namespace CabinetDataStore.Business.Services
                 }
             }
         }
+
+        public bool UpdatePatient(PatientModel patient)
+        {
+            bool result = false;
+            using (CabinetEntities context = new CabinetEntities())
+            {
+                try
+                {
+                    var patientToUpdate = context.PatientsData.Where(x => x.PatientId == patient.PatientId).FirstOrDefault();
+                    patientToUpdate.PatientName = patient.PatientName;
+                    patientToUpdate.PhoneNumber = patient.PhoneNumber;
+                    patientToUpdate.email = patient.EmailAddress;
+                    patientToUpdate.BirthDay = patient.BirthDate;
+                    context.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+
+                    return result;
+                }
+            }
+        }
     }
 }

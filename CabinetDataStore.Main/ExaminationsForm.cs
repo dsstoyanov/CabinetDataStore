@@ -75,6 +75,7 @@ namespace CabinetDataStore.Main
                 ms = new MemoryStream(examination.Photo);
                 picColposcopy.Image = Image.FromStream(ms);
                 btnSavePic.Enabled = true;
+                btnClearPic.Enabled = true;
             }
             if (examination.PRM == DateTime.MinValue)
             {
@@ -476,6 +477,11 @@ namespace CabinetDataStore.Main
 
                 g.DrawString("Подпис: _____________  Печат:", names, brush, new Rectangle(350, 1090, 500, 170));
             }
+        }
+
+        private void btnClearPic_Click(object sender, EventArgs e)
+        {
+            picColposcopy.Image = null;
         }
     }
 }
