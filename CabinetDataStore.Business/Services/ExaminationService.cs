@@ -80,7 +80,6 @@ namespace CabinetDataStore.Business.Services
                     Examination.Colposcopy = newExamination.Colposcopy;
                     Examination.Diagnosis = newExamination.Diagnosis;
                     Examination.Echography = newExamination.Echography;
-                    Examination.ExaminationDate = DateTime.Now;
                     Examination.Fluorine = newExamination.Fluorine;
                     Examination.Operations = newExamination.Operations;
                     Examination.Others = newExamination.Others;

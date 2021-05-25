@@ -24,6 +24,7 @@ namespace CabinetDataStore.Main
         private readonly PatientModel Patient;
         private readonly ExaminationModel Examination;
         private readonly bool isForEdit = false;
+        private string printName = string.Empty;
 
         public ExaminationsForm(PatientModel Patient, IPatient patientService, IExamination examinationService)
         {
@@ -31,11 +32,12 @@ namespace CabinetDataStore.Main
             this.Patient = Patient;
             this.patientService = patientService;
             this.examinationService = examinationService;
-            
-            txtPatientName.Text = Patient.PatientName + " - Години: " + PatientForm.AgeCalculator(Patient.BirthDate).ToString();
+
+            txtPatientName.Text = Patient.PatientName + " - Години: " + PatientForm.AgeCalculator(DateTime.Now, Patient.BirthDate).ToString();
+            printName = Patient.PatientName + " - " + PatientForm.AgeCalculator(DateTime.Now, Patient.BirthDate).ToString() + "г.";
             txtExamDate.Text = DateTime.Now.ToString();
 
-            EnableAllActions();
+            NewExaminationProperties(false);
             this.Focus();
         }
 
@@ -52,10 +54,11 @@ namespace CabinetDataStore.Main
 
         private void LoadExamination(PatientModel patient, ExaminationModel examination)
         {
-            EnableAllActions();
+            DisableAllActions();
             txtExaminationID.Text = examination.ExaminationID.ToString();
             btnPrint.Visible = true;
-            txtPatientName.Text = patient.PatientName + " - Години: " + PatientForm.AgeCalculator(patient.BirthDate).ToString();
+            txtPatientName.Text = patient.PatientName + " - Години: " + PatientForm.AgeCalculator(examination.ExaminationDate, patient.BirthDate).ToString();
+            printName = patient.PatientName + " - " + PatientForm.AgeCalculator(examination.ExaminationDate, Patient.BirthDate).ToString() + "г.";
             txtExamDate.Text = Convert.ToString(examination.ExaminationDate);
             txtDiagnosis.Text = examination.Diagnosis;
             txtBirths.Text = examination.BirthsCount.ToString();
@@ -74,8 +77,8 @@ namespace CabinetDataStore.Main
                 MemoryStream ms = new MemoryStream();
                 ms = new MemoryStream(examination.Photo);
                 picColposcopy.Image = Image.FromStream(ms);
-                btnSavePic.Enabled = true;
-                btnClearPic.Enabled = true;
+                btnSavePic.Enabled = false;
+                btnClearPic.Enabled = false;
             }
             if (examination.PRM == DateTime.MinValue)
             {
@@ -84,7 +87,34 @@ namespace CabinetDataStore.Main
             dtpPRM.Text = Convert.ToString(examination.PRM);
         }
 
-        private void EnableAllActions()
+        private void DisableAllActions()
+        {
+            txtDiagnosis.Enabled = false;
+            txtBirths.Enabled = false;
+            txtOperations.Enabled = false;
+            txtColposcopy.Enabled = false;
+            txtEchography.Enabled = false;
+            txtBleeding.Enabled = false;
+            txtPain.Enabled = false;
+            txtFluorine.Enabled = false;
+            txtOther.Enabled = false;
+            txtResults.Enabled = false;
+            txtTherapy.Enabled = false;
+            txtRecommendations.Enabled = false;
+            btnSave.Visible = true;
+            btnEdit.Visible = true;
+            btnCancel.Visible = true;
+            btnChoosePic.Visible = true;
+            btnChoosePic.Enabled = false;
+            btnClearPic.Visible = true;
+            btnClearPic.Enabled = false;
+            btnSavePic.Visible = true;
+            btnSavePic.Enabled = false;
+            dtpPRM.Enabled = false;
+            dtpPRM.Text = Convert.ToString(dtpPRM.MinDate);
+        }
+
+        private void NewExaminationProperties(bool isEdit)
         {
             txtDiagnosis.Enabled = true;
             txtBirths.Enabled = true;
@@ -99,14 +129,17 @@ namespace CabinetDataStore.Main
             txtTherapy.Enabled = true;
             txtRecommendations.Enabled = true;
             btnSave.Visible = true;
+            btnEdit.Visible = true;
             btnCancel.Visible = true;
             btnChoosePic.Visible = true;
             btnChoosePic.Enabled = true;
             btnClearPic.Visible = true;
-            btnClearPic.Enabled = false;
+            btnClearPic.Enabled = true;
             btnSavePic.Visible = true;
-            btnSavePic.Enabled = false;
+            btnSavePic.Enabled = true;
             dtpPRM.Enabled = true;
+            btnPrint.Visible = true;
+            if(!isEdit)
             dtpPRM.Text = Convert.ToString(dtpPRM.MinDate);
         }
 
@@ -204,7 +237,7 @@ namespace CabinetDataStore.Main
                     bool isUpdated = examinationService.UpdateExamination(model, Examination);
                     if (isUpdated)
                     {
-                        this.Close();
+                        DisableAllActions();
                         //PatientForm pf = new PatientForm(patientService, examinationService);
                         //pf.PatientForm_Load(sender, e);
                         //pf.ShowDialog();
@@ -241,12 +274,12 @@ namespace CabinetDataStore.Main
 
 
                     bool isInserted = examinationService.InsertExamination(model);
-                    if (isInserted)
-                    {
-                        this.Close();
-                        //PatientForm pf = new PatientForm(patientService, examinationService);
-                        //pf.ShowDialog();
-                    }
+                    //if (isInserted)
+                    //{
+                    //    this.Close();
+                    //    //PatientForm pf = new PatientForm(patientService, examinationService);
+                    //    //pf.ShowDialog();
+                    //}
                 }
             }
         }
@@ -323,7 +356,7 @@ namespace CabinetDataStore.Main
                 
                 g.DrawString(label2.Text, font, brush, new Rectangle(400, 300, 100, 30));
                 g.DrawRectangle(Pens.Black, 470, 297, 295, 20);
-                g.DrawString(txtPatientName.Text, datas, brush, new Rectangle(475, 299, 295, 20));
+                g.DrawString(printName, datas, brush, new Rectangle(475, 299, 295, 20));
                 
                 //Anamneza
 
@@ -411,7 +444,7 @@ namespace CabinetDataStore.Main
                 //Patient
                 g.DrawString(label2.Text, font, brush, new Rectangle(400, 300, 100, 30));
                 g.DrawRectangle(Pens.Black, 470, 297, 295, 20);
-                g.DrawString(txtPatientName.Text, datas, brush, new Rectangle(475, 299, 295, 20));
+                g.DrawString(printName, datas, brush, new Rectangle(475, 299, 295, 20));
 
 
                 //Anamneza
@@ -482,6 +515,11 @@ namespace CabinetDataStore.Main
         private void btnClearPic_Click(object sender, EventArgs e)
         {
             picColposcopy.Image = null;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            NewExaminationProperties(true);
         }
     }
 }

@@ -15,6 +15,7 @@ namespace CabinetDataStore.Main
     public partial class AddPatient : Form
     {
         private readonly IPatient patientService;
+
         public AddPatient(IPatient patientService)
         {
             InitializeComponent();
@@ -35,6 +36,7 @@ namespace CabinetDataStore.Main
             if (result)
             {
                 MessageBox.Show("Пациента е добавен успешно", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //PatientForm pf = new PatientForm(patientModel);
                 this.Close();
             }
             else
@@ -45,7 +47,7 @@ namespace CabinetDataStore.Main
 
         private void dtBirthDate_Leave(object sender, EventArgs e)
         {
-            txtAge.Text = PatientForm.AgeCalculator(Convert.ToDateTime(dtBirthDate.Text)).ToString();
+            txtAge.Text = PatientForm.AgeCalculator(DateTime.Now, Convert.ToDateTime(dtBirthDate.Text)).ToString();
         }
     }
 }

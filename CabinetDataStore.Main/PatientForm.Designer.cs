@@ -56,6 +56,7 @@
             this.dgvAll = new System.Windows.Forms.DataGridView();
             this.pID = new System.Windows.Forms.TextBox();
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
+            this.timerProgress = new System.Windows.Forms.Timer(this.components);
             this.grpPatientData.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -122,7 +123,7 @@
             this.grpPatientData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grpPatientData.Location = new System.Drawing.Point(12, 120);
             this.grpPatientData.Name = "grpPatientData";
-            this.grpPatientData.Size = new System.Drawing.Size(591, 149);
+            this.grpPatientData.Size = new System.Drawing.Size(495, 149);
             this.grpPatientData.TabIndex = 21;
             this.grpPatientData.TabStop = false;
             this.grpPatientData.Text = "Пациент";
@@ -131,7 +132,7 @@
             // 
             this.addNewExamButton.Location = new System.Drawing.Point(367, 103);
             this.addNewExamButton.Name = "addNewExamButton";
-            this.addNewExamButton.Size = new System.Drawing.Size(204, 34);
+            this.addNewExamButton.Size = new System.Drawing.Size(116, 34);
             this.addNewExamButton.TabIndex = 30;
             this.addNewExamButton.Text = "Нов Преглед";
             this.addNewExamButton.UseVisualStyleBackColor = true;
@@ -152,10 +153,10 @@
             // txtAge
             // 
             this.txtAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtAge.Location = new System.Drawing.Point(418, 75);
+            this.txtAge.Location = new System.Drawing.Point(399, 75);
             this.txtAge.Name = "txtAge";
             this.txtAge.ReadOnly = true;
-            this.txtAge.Size = new System.Drawing.Size(153, 20);
+            this.txtAge.Size = new System.Drawing.Size(84, 20);
             this.txtAge.TabIndex = 28;
             // 
             // txtEmail
@@ -171,9 +172,9 @@
             // 
             this.txtPatientPhone.Enabled = false;
             this.txtPatientPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtPatientPhone.Location = new System.Drawing.Point(418, 41);
+            this.txtPatientPhone.Location = new System.Drawing.Point(399, 41);
             this.txtPatientPhone.Name = "txtPatientPhone";
-            this.txtPatientPhone.Size = new System.Drawing.Size(153, 20);
+            this.txtPatientPhone.Size = new System.Drawing.Size(84, 20);
             this.txtPatientPhone.TabIndex = 26;
             // 
             // txtPatientName
@@ -189,7 +190,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.Location = new System.Drawing.Point(369, 79);
+            this.label6.Location = new System.Drawing.Point(350, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 24;
@@ -229,7 +230,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(364, 44);
+            this.label2.Location = new System.Drawing.Point(341, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 20;
@@ -253,6 +254,7 @@
             this.txtFilter.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtFilter.Size = new System.Drawing.Size(275, 22);
             this.txtFilter.TabIndex = 19;
+            this.txtFilter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilter_KeyPress);
             // 
             // dtFilterDate
             // 
@@ -296,9 +298,9 @@
             // 
             this.groupBox3.Controls.Add(this.dgvDaily);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(621, 12);
+            this.groupBox3.Location = new System.Drawing.Point(513, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(485, 257);
+            this.groupBox3.Size = new System.Drawing.Size(593, 257);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Прегледи за деня";
@@ -319,7 +321,7 @@
             this.dgvDaily.ReadOnly = true;
             this.dgvDaily.RowHeadersVisible = false;
             this.dgvDaily.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDaily.Size = new System.Drawing.Size(454, 208);
+            this.dgvDaily.Size = new System.Drawing.Size(562, 208);
             this.dgvDaily.TabIndex = 11;
             this.dgvDaily.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDaily_CellMouseDoubleClick);
             // 
@@ -366,6 +368,11 @@
             // 
             this.refreshTimer.Interval = 20000;
             this.refreshTimer.Tick += new System.EventHandler(this.refreshTimer_Tick);
+            // 
+            // timerProgress
+            // 
+            this.timerProgress.Interval = 1000;
+            this.timerProgress.Tick += new System.EventHandler(this.timerProgress_Tick);
             // 
             // PatientForm
             // 
@@ -429,6 +436,7 @@
         private System.Windows.Forms.Button addNewExamButton;
         private System.Windows.Forms.TextBox pID;
         private System.Windows.Forms.Timer refreshTimer;
+        private System.Windows.Forms.Timer timerProgress;
     }
 }
 

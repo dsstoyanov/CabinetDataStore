@@ -88,17 +88,18 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(625, 635);
+            this.btnEdit.Location = new System.Drawing.Point(706, 635);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 49;
             this.btnEdit.Text = "Редактирай";
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Visible = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(502, 635);
+            this.btnPrint.Location = new System.Drawing.Point(583, 635);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(117, 23);
             this.btnPrint.TabIndex = 48;
@@ -375,7 +376,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(706, 635);
+            this.btnNew.Location = new System.Drawing.Point(502, 635);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 44;

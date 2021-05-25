@@ -21,11 +21,19 @@ namespace CabinetDataStore.Main
         private DataTable dt = new DataTable();
         private DataTable dtExamination = new DataTable();
 
+        public PatientForm(PatientModel model)
+        {
+            txtPatientName.Text = model.PatientName;
+            txtPatientPhone.Text = model.PhoneNumber;
+            txtEmail.Text = model.EmailAddress;
+        }
+
         public PatientForm(IPatient patientService, IExamination examinationService)
         {
             InitializeComponent();
             refreshTimer.Start();
             refreshTimer.Interval = 1;
+           
             this.patientService = patientService;
             this.examinationService = examinationService;
         }
@@ -101,20 +109,37 @@ namespace CabinetDataStore.Main
 
         private void srchButton_Click(object sender, EventArgs e)
         {
-            var PatientData = LoadPatientData();
-            ClearPatientData();
-
-            if (PatientData.Count == 1)
+            if (comboFilter.SelectedIndex == (int)SearchTypes.Name)
             {
-                ShowPatientData(PatientData);
+                var PatientData = LoadPatientData();
+                ClearPatientData();
+
+                if (PatientData.Count == 1)
+                {
+                    ShowPatientData(PatientData);
+                }
+
+                else if (PatientData.Count != 0 && PatientData.Count > 1)
+                {
+                    ChoosePatient choose = new ChoosePatient(this, PatientData, patientService, examinationService);
+                    choose.ShowDialog();
+                }
             }
-
-            else if (PatientData.Count != 0 && PatientData.Count > 1)
+            else if (comboFilter.SelectedIndex == (int)SearchTypes.PhoneNumber)
             {
+                var PatientData = LoadPatientData();
+                ClearPatientData();
 
-                ChoosePatient choose = new ChoosePatient(this, PatientData, patientService, examinationService);
-                choose.ShowDialog();
+                if (PatientData.Count == 1)
+                {
+                    ShowPatientData(PatientData);
+                }
 
+                else if (PatientData.Count != 0 && PatientData.Count > 1)
+                {
+                    ChoosePatient choose = new ChoosePatient(this, PatientData, patientService, examinationService);
+                    choose.ShowDialog();
+                }
             }
         }
 
@@ -122,7 +147,9 @@ namespace CabinetDataStore.Main
 
         private void comboFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            txtFilter.Clear();
             ClearPatientData();
+            pID.Text = string.Empty;
             dt.Clear();
             if (comboFilter.SelectedIndex == (int)SearchTypes.DateOfBirth)
             {
@@ -180,7 +207,7 @@ namespace CabinetDataStore.Main
                 dtBirthDate.Text = patient.BirthDate.ToString();
                 txtPatientPhone.Text = patient.PhoneNumber;
                 txtEmail.Text = patient.EmailAddress;
-                txtAge.Text = AgeCalculator(patient.BirthDate).ToString();
+                txtAge.Text = AgeCalculator(DateTime.Now, patient.BirthDate).ToString();
                 pID.Text = patient.PatientId.ToString();
                 grpPatientData.Text = $"Пациент N: {patient.PatientId}";
 
@@ -188,19 +215,19 @@ namespace CabinetDataStore.Main
                 //dtExamination.Clear();
                 foreach (var examination in patient.Examinations)
                 {
-                    dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, txtAge.Text, patient.Examinations.Count() });
+                    dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate, patient.BirthDate), patient.Examinations.Count() });
                 }
                 dgvAll.DataSource = dt;
                 dgvAll.Focus();
             }
         }
 
-        public static int AgeCalculator(DateTime BirthDate)
+        public static int AgeCalculator(DateTime Date,DateTime BirthDate)
         {
-            int age = DateTime.Now.Year - BirthDate.Year;
+            int age = Date.Year - BirthDate.Year;
 
-            if (DateTime.Now.Month < BirthDate.Month ||
-                (DateTime.Now.Month == BirthDate.Month && DateTime.Now.Day < BirthDate.Day))
+            if (Date.Month < BirthDate.Month ||
+                (Date.Month == BirthDate.Month && Date.Day < BirthDate.Day))
             {
                 age--;
             }
@@ -249,7 +276,7 @@ namespace CabinetDataStore.Main
             if (e.RowIndex != -1)
             {
                 long ExaminationId = 0;
-                var patient = patientService.GetPatientById(int.Parse(dtExamination.Rows[e.RowIndex].ItemArray[3].ToString()));
+                var patient = patientService.GetPatientById(Convert.ToInt64(dgvDaily.Rows[e.RowIndex].Cells[3].Value));
 
                 ExaminationId = Convert.ToInt32(dgvDaily.Rows[e.RowIndex].Cells[0].Value);
 
@@ -273,7 +300,7 @@ namespace CabinetDataStore.Main
             //dtExamination.Clear();
             foreach (var examination in patient.Examinations)
             {
-                dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, txtAge.Text, patient.Examinations.Count() });
+                dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate, patient.BirthDate), patient.Examinations.Count() });
             }
             dgvAll.DataSource = dt;
             dgvAll.Focus();
@@ -296,60 +323,38 @@ namespace CabinetDataStore.Main
 
         private void PatientForm_Activated(object sender, EventArgs e)
         {
-            ////ReloadDailyExaminations();
-            //comboFilter.SelectedIndex = 0;
-            //dtFilterDate.Visible = false;
-            //АutoCompleteInsert();
-
-            //dt.Columns.Add("ID", typeof(int));
-
-            //dt.Columns.Add("Име", typeof(string));
-            //dt.Columns.Add("Дата на прегледа", typeof(DateTime));
-            //dt.Columns.Add("Телефон", typeof(string));
-            //dt.Columns.Add("Email", typeof(string));
-            //dt.Columns.Add("Възраст", typeof(int));
-            //dt.Columns.Add("Прегледи", typeof(int));
-
-            //dtExamination.Columns.Add("ID", typeof(string));
-            //dtExamination.Columns.Add("Пациент", typeof(string));
-            //dtExamination.Columns.Add("Дата на прегледа", typeof(string));
-            //dtExamination.Columns.Add("Пациент ID", typeof(string));
-
-
-            //var examinations = LoadDailyExaminations();
-            //if (examinations.Count != 0 || examinations.Count > 0)
-            //{
-            //    foreach (var exam in examinations)
-            //    {
-            //        var patient = patientService.GetPatientById(exam.PatientId);
-            //        dtExamination.Rows.Add(new object[]
-            //            {
-            //                exam.ExaminationID,
-            //                patient.PatientName,
-            //                exam.ExaminationDate,
-            //                patient.PatientId
-            //            });
-            //    }
-            //}
-            //dgvDaily.DataSource = dtExamination;
-            //dgvDaily.Columns["ID"].Width = 30;
-            //dgvDaily.Columns["Пациент"].Width = 200;
-            //dgvDaily.Columns["Дата на прегледа"].Width = 200;
-            //dgvDaily.Columns["Пациент ID"].Width = 1;
-
-            //LoadPatientData();
+            dt.Clear();
+            RefreshDailyExaminations();
+            dgvDaily.Columns["ID"].Width = 60;
+            dgvDaily.Columns["Пациент"].Width = 250;
+            dgvDaily.Columns["Дата на прегледа"].Width = 150;
+            dgvDaily.Columns["Пациент ID"].Width = 1;
+            this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
+            АutoCompleteInsert();
+            if (!string.IsNullOrEmpty(pID.Text))
+            {
+                var patient = patientService.GetPatientById(int.Parse(pID.Text));
+                patient.Examinations = examinationService.GetAllExaminationsByPatientID(patient.PatientId);
+                //dtExamination.Clear();
+                foreach (var examination in patient.Examinations)
+                {
+                    dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate,patient.BirthDate), patient.Examinations.Count() });
+                }
+                dgvAll.DataSource = dt;
+                dgvAll.Focus();
+            }
         }
 
         private void refreshTimer_Tick(object sender, EventArgs e)
         {
-            refreshTimer.Interval = 10000;
-            RefreshDailyExaminations();
-            dgvDaily.Columns["ID"].Width = 30;
-            dgvDaily.Columns["Пациент"].Width = 200;
-            dgvDaily.Columns["Дата на прегледа"].Width = 200;
-            dgvDaily.Columns["Пациент ID"].Width = 1;
-            this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
-            АutoCompleteInsert();
+            //refreshTimer.Interval = 10000;
+            //RefreshDailyExaminations();
+            //dgvDaily.Columns["ID"].Width = 80;
+            //dgvDaily.Columns["Пациент"].Width = 200;
+            //dgvDaily.Columns["Дата на прегледа"].Width = 200;
+            //dgvDaily.Columns["Пациент ID"].Width = 1;
+            //this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
+            //АutoCompleteInsert();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -399,7 +404,7 @@ namespace CabinetDataStore.Main
             txtPatientPhone.Text = patient.PhoneNumber;
             txtEmail.Text = patient.EmailAddress;
             dtBirthDate.Text = patient.BirthDate.ToString();
-            txtAge.Text = AgeCalculator(patient.BirthDate).ToString();
+            txtAge.Text = AgeCalculator(DateTime.Now, patient.BirthDate).ToString();
             pID.Text = patient.PatientId.ToString();
         }
 
@@ -414,13 +419,30 @@ namespace CabinetDataStore.Main
             model.EmailAddress = txtEmail.Text;
             model.BirthDate = Convert.ToDateTime(dtBirthDate.Text);
             model.PatientId = int.Parse(pID.Text);
-            txtAge.Text = AgeCalculator(model.BirthDate).ToString();
+            txtAge.Text = AgeCalculator(DateTime.Now, model.BirthDate).ToString();
 
             bool updatePatient = patientService.UpdatePatient(model);
             if (updatePatient)
             {
                 АutoCompleteInsert();
                 MessageBox.Show("Промените бяха записани успешно!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void timerProgress_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (comboFilter.SelectedIndex == (int)SearchTypes.PhoneNumber)
+            {
+                e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+                if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+                {
+                    MessageBox.Show("Филтърът за търсене е по телефон. За въвеждане на име моля сменете филтъра.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
     }
