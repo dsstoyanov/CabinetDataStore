@@ -6,8 +6,10 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,8 +30,18 @@ namespace CabinetDataStore.Main
 
             IPatient patients = kernel.Get<IPatient>();
             IExamination examinations = kernel.Get<IExamination>();
-            
 
+            string logFolder = string.Empty;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                logFolder = Directory.GetCurrentDirectory() + "\\Logs\\";
+            }
+            else
+            {
+                logFolder = Directory.GetCurrentDirectory() + "//Logs//";
+            }
+
+            Logger.LoggerManager.InitializeLogger("CabinetDataStore", logFolder, "localhost", "50", "All");
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

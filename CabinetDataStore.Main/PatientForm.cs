@@ -33,7 +33,7 @@ namespace CabinetDataStore.Main
             InitializeComponent();
             refreshTimer.Start();
             refreshTimer.Interval = 1;
-           
+            Logger.LoggerManager.Informational($"asd", this.GetType().Name);
             this.patientService = patientService;
             this.examinationService = examinationService;
         }

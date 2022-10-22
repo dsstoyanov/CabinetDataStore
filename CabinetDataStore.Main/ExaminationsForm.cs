@@ -54,7 +54,7 @@ namespace CabinetDataStore.Main
 
         private void LoadExamination(PatientModel patient, ExaminationModel examination)
         {
-            DisableAllActions();
+            DisableAllActions(false);
             txtExaminationID.Text = examination.ExaminationID.ToString();
             btnPrint.Visible = true;
             txtPatientName.Text = patient.PatientName + " - Години: " + PatientForm.AgeCalculator(examination.ExaminationDate, patient.BirthDate).ToString();
@@ -87,7 +87,7 @@ namespace CabinetDataStore.Main
             dtpPRM.Text = Convert.ToString(examination.PRM);
         }
 
-        private void DisableAllActions()
+        private void DisableAllActions(bool isForEdit)
         {
             txtDiagnosis.Enabled = false;
             txtBirths.Enabled = false;
@@ -111,6 +111,7 @@ namespace CabinetDataStore.Main
             btnSavePic.Visible = true;
             btnSavePic.Enabled = false;
             dtpPRM.Enabled = false;
+            if(!isForEdit)
             dtpPRM.Text = Convert.ToString(dtpPRM.MinDate);
         }
 
@@ -237,7 +238,7 @@ namespace CabinetDataStore.Main
                     bool isUpdated = examinationService.UpdateExamination(model, Examination);
                     if (isUpdated)
                     {
-                        DisableAllActions();
+                        DisableAllActions(true);
                         //PatientForm pf = new PatientForm(patientService, examinationService);
                         //pf.PatientForm_Load(sender, e);
                         //pf.ShowDialog();
