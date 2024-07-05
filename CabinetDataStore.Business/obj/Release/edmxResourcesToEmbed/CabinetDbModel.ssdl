@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KabinetDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PatientData">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDay" Type="datetime" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PregledData">
+    <Key>
+      <PropertyRef Name="PregledId" />
+    </Key>
+    <Property Name="PregledId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PatientId" Type="int" Nullable="false" />
+    <Property Name="PregledDate" Type="datetime" Nullable="false" />
+    <Property Name="PRM" Type="datetime" />
+    <Property Name="Rajdaniq" Type="int" />
+    <Property Name="Operacii" Type="text" />
+    <Property Name="Bolka" Type="text" />
+    <Property Name="Kurvene" Type="text" />
+    <Property Name="Fluor" Type="text" />
+    <Property Name="Drugi" Type="text" />
+    <Property Name="Kolposkopiq" Type="text" />
+    <Property Name="Ehografiq" Type="text" />
+    <Property Name="Rezultati" Type="text" />
+    <Property Name="Terapiq" Type="text" />
+    <Property Name="Preporuki" Type="text" />
+    <Property Name="Diagnoza" Type="text" />
+    <Property Name="Snimka" Type="image" />
+  </EntityType>
+  <Association Name="FK_PregledData_PatientData">
+    <End Role="PatientData" Type="Self.PatientData" Multiplicity="1" />
+    <End Role="PregledData" Type="Self.PregledData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientData">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="PregledData">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KabinetDbModelStoreContainer">
+    <EntitySet Name="PatientData" EntityType="Self.PatientData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PregledData" EntityType="Self.PregledData" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_PregledData_PatientData" Association="Self.FK_PregledData_PatientData">
+      <End Role="PatientData" EntitySet="PatientData" />
+      <End Role="PregledData" EntitySet="PregledData" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

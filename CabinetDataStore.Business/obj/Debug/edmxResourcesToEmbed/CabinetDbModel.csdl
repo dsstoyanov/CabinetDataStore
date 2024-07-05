@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KabinetDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PatientData">
+    <Key>
+      <PropertyRef Name="PatientId" />
+    </Key>
+    <Property Name="PatientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BirthDay" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PregledDatas" Relationship="Self.FK_PregledData_PatientData" FromRole="PatientData" ToRole="PregledData" />
+  </EntityType>
+  <EntityType Name="PregledData">
+    <Key>
+      <PropertyRef Name="PregledId" />
+    </Key>
+    <Property Name="PregledId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PatientId" Type="Int32" Nullable="false" />
+    <Property Name="PregledDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PRM" Type="DateTime" Precision="3" />
+    <Property Name="Rajdaniq" Type="Int32" />
+    <Property Name="Operacii" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Bolka" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Kurvene" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Fluor" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Drugi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Kolposkopiq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Ehografiq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Rezultati" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Terapiq" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Preporuki" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PatientData" Relationship="Self.FK_PregledData_PatientData" FromRole="PregledData" ToRole="PatientData" />
+    <Property Name="Diagnoza" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Snimka" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_PregledData_PatientData">
+    <End Role="PatientData" Type="Self.PatientData" Multiplicity="1" />
+    <End Role="PregledData" Type="Self.PregledData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PatientData">
+        <PropertyRef Name="PatientId" />
+      </Principal>
+      <Dependent Role="PregledData">
+        <PropertyRef Name="PatientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CabinetEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PatientDatas" EntityType="Self.PatientData" />
+    <EntitySet Name="PregledDatas" EntityType="Self.PregledData" />
+    <AssociationSet Name="FK_PregledData_PatientData" Association="Self.FK_PregledData_PatientData">
+      <End Role="PatientData" EntitySet="PatientDatas" />
+      <End Role="PregledData" EntitySet="PregledDatas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

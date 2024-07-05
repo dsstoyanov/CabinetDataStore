@@ -1,0 +1,5 @@
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.BusinessService\bin\Release\CabinetDataStore.BusinessService.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.BusinessService\bin\Release\CabinetDataStore.BusinessService.pdb
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.BusinessService\obj\Release\CabinetDataStore.Business.csproj.CoreCompileInputs.cache
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.BusinessService\obj\Release\CabinetDataStore.BusinessService.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.BusinessService\obj\Release\CabinetDataStore.BusinessService.pdb

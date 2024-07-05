@@ -18,6 +18,9 @@ namespace CabinetDataStore.Business.Abstraction
         bool InsertExamination(ExaminationModel examination);
 
         bool UpdateExamination(ExaminationModel newExamination, ExaminationModel oldExamination);
-        
+
+        int ExaminationsCount();
+
+        List<ExaminationModel> GetExaminationsByDate(DateTime date);
     }
 }
