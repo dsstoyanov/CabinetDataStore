@@ -1,0 +1,204 @@
+Date;Time;Thread ID;Log Type;Log Level;Message;
+2023-02-08;01:03:28;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:03:28;1;Application;Informational;"Date: 08/02/2023 01:03:28.727; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:04:30;1;Application;Informational;"Date: 08/02/2023 01:04:30.069; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:06:18;1;Application;Informational;"Date: 08/02/2023 01:06:18.357; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:08:21;1;General;Informational;================================================================;
+2023-02-08;01:08:21;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:08:21;1;Application;Informational;"Date: 08/02/2023 01:08:21.356; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:08:38;1;General;Informational;================================================================;
+2023-02-08;01:08:38;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:08:38;1;Application;Informational;"Date: 08/02/2023 01:08:38.104; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:11:10;1;General;Informational;================================================================;
+2023-02-08;01:11:10;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:11:10;1;Application;Informational;"Date: 08/02/2023 01:11:10.911; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:11:18;1;Application;Informational;"Date: 08/02/2023 01:11:18.053; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:11:48;1;Application;Informational;"Date: 08/02/2023 01:11:48.888; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:12:37;1;Application;Informational;"Date: 08/02/2023 01:12:37.604; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:14:40;1;General;Informational;================================================================;
+2023-02-08;01:14:40;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:14:40;1;Application;Informational;"Date: 08/02/2023 01:14:40.474; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:15:04;1;General;Informational;================================================================;
+2023-02-08;01:15:04;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:15:04;1;Application;Informational;"Date: 08/02/2023 01:15:04.284; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:15:51;1;Application;Informational;"Date: 08/02/2023 01:15:51.624; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:16:58;1;General;Informational;================================================================;
+2023-02-08;01:16:58;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:16:58;1;Application;Informational;"Date: 08/02/2023 01:16:58.049; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:17:02;1;Application;Informational;"Date: 08/02/2023 01:17:02.249; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:17:08;1;General;Informational;================================================================;
+2023-02-08;01:17:08;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:17:08;1;Application;Informational;"Date: 08/02/2023 01:17:08.381; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:18:02;1;Application;Informational;"Date: 08/02/2023 01:18:02.906; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:21:26;1;Application;Informational;"Date: 08/02/2023 01:21:26.306; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:26:30;1;General;Informational;================================================================;
+2023-02-08;01:26:30;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:26:30;1;Application;Informational;"Date: 08/02/2023 01:26:30.455; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:26:38;1;Application;Informational;"Date: 08/02/2023 01:26:38.606; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:14;1;Application;Informational;"Date: 08/02/2023 01:27:14.358; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:15;1;Application;Informational;"Date: 08/02/2023 01:27:15.067; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:15;1;Application;Informational;"Date: 08/02/2023 01:27:15.552; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:15;1;Application;Informational;"Date: 08/02/2023 01:27:15.741; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:15;1;Application;Informational;"Date: 08/02/2023 01:27:15.895; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:16;1;Application;Informational;"Date: 08/02/2023 01:27:16.062; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:16;1;Application;Informational;"Date: 08/02/2023 01:27:16.284; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:16;1;Application;Informational;"Date: 08/02/2023 01:27:16.441; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:40;1;Application;Informational;"Date: 08/02/2023 01:27:40.492; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:40;1;Application;Informational;"Date: 08/02/2023 01:27:40.834; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:40;1;Application;Informational;"Date: 08/02/2023 01:27:40.992; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:41;1;Application;Informational;"Date: 08/02/2023 01:27:41.147; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:41;1;Application;Informational;"Date: 08/02/2023 01:27:41.323; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:27:44;1;Application;Informational;"Date: 08/02/2023 01:27:44.343; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:29:35;1;General;Informational;================================================================;
+2023-02-08;01:29:35;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:29:35;1;Application;Informational;"Date: 08/02/2023 01:29:35.713; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:29:40;1;Application;Informational;"Date: 08/02/2023 01:29:40.138; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:32:07;1;General;Informational;================================================================;
+2023-02-08;01:32:07;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:32:07;1;Application;Informational;"Date: 08/02/2023 01:32:07.426; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:33:27;1;General;Informational;================================================================;
+2023-02-08;01:33:27;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:33:27;1;Application;Informational;"Date: 08/02/2023 01:33:27.949; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:35:03;1;General;Informational;================================================================;
+2023-02-08;01:35:03;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:35:03;1;Application;Informational;"Date: 08/02/2023 01:35:03.057; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:35:51;1;General;Informational;================================================================;
+2023-02-08;01:35:51;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:35:52;1;Application;Informational;"Date: 08/02/2023 01:35:52.026; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:36:13;1;Application;Informational;"Date: 08/02/2023 01:36:13.317; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:37:18;1;General;Informational;================================================================;
+2023-02-08;01:37:18;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:37:19;1;Application;Informational;"Date: 08/02/2023 01:37:19.003; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:37:26;1;Application;Informational;"Date: 08/02/2023 01:37:26.704; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:39:43;1;General;Informational;================================================================;
+2023-02-08;01:39:43;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:39:44;1;Application;Informational;"Date: 08/02/2023 01:39:44.016; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:39:48;1;Application;Informational;"Date: 08/02/2023 01:39:48.530; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:39:53;1;General;Informational;================================================================;
+2023-02-08;01:39:53;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:39:53;1;Application;Informational;"Date: 08/02/2023 01:39:53.467; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:39:58;1;Application;Informational;"Date: 08/02/2023 01:39:58.276; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:40:36;1;General;Informational;================================================================;
+2023-02-08;01:40:36;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:40:36;1;Application;Informational;"Date: 08/02/2023 01:40:36.658; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:40:43;1;Application;Informational;"Date: 08/02/2023 01:40:43.526; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:41:56;1;General;Informational;================================================================;
+2023-02-08;01:41:56;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:41:56;1;Application;Informational;"Date: 08/02/2023 01:41:56.550; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:42:19;1;General;Informational;================================================================;
+2023-02-08;01:42:19;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:42:19;1;Application;Informational;"Date: 08/02/2023 01:42:19.985; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:42:47;1;General;Informational;================================================================;
+2023-02-08;01:42:47;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:42:48;1;Application;Informational;"Date: 08/02/2023 01:42:48.009; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:42:58;1;Application;Informational;"Date: 08/02/2023 01:42:58.516; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:43:30;1;General;Informational;================================================================;
+2023-02-08;01:43:30;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:43:30;1;Application;Informational;"Date: 08/02/2023 01:43:30.507; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:43:52;1;General;Informational;================================================================;
+2023-02-08;01:43:52;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:43:52;1;Application;Informational;"Date: 08/02/2023 01:43:52.164; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:43:58;1;Application;Informational;"Date: 08/02/2023 01:43:58.757; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:46:10;1;General;Informational;================================================================;
+2023-02-08;01:46:10;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:46:10;1;Application;Informational;"Date: 08/02/2023 01:46:10.560; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:46:15;1;Application;Informational;"Date: 08/02/2023 01:46:15.492; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:46:29;1;General;Informational;================================================================;
+2023-02-08;01:46:29;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:46:29;1;Application;Informational;"Date: 08/02/2023 01:46:29.900; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:46:33;1;Application;Informational;"Date: 08/02/2023 01:46:33.833; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:47:09;1;General;Informational;================================================================;
+2023-02-08;01:47:09;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:47:09;1;Application;Informational;"Date: 08/02/2023 01:47:09.974; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:47:27;1;Application;Informational;"Date: 08/02/2023 01:47:27.452; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:47:43;1;General;Informational;================================================================;
+2023-02-08;01:47:43;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:47:43;1;Application;Informational;"Date: 08/02/2023 01:47:43.816; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:47:49;1;Application;Informational;"Date: 08/02/2023 01:47:49.169; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:48:33;1;General;Informational;================================================================;
+2023-02-08;01:48:33;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:48:33;1;Application;Informational;"Date: 08/02/2023 01:48:33.359; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:48:56;1;Application;Informational;"Date: 08/02/2023 01:48:56.076; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:49:04;1;Application;Informational;"Date: 08/02/2023 01:49:04.915; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:49:08;1;Application;Informational;"Date: 08/02/2023 01:49:08.103; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:49:12;1;Application;Informational;"Date: 08/02/2023 01:49:12.832; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:49:54;1;General;Informational;================================================================;
+2023-02-08;01:49:54;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:49:54;1;Application;Informational;"Date: 08/02/2023 01:49:54.088; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:50:41;1;General;Informational;================================================================;
+2023-02-08;01:50:41;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:50:41;1;Application;Informational;"Date: 08/02/2023 01:50:41.187; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:51:03;1;Application;Informational;"Date: 08/02/2023 01:51:03.668; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:51:25;1;General;Informational;================================================================;
+2023-02-08;01:51:25;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:51:25;1;Application;Informational;"Date: 08/02/2023 01:51:25.987; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:52:07;1;General;Informational;================================================================;
+2023-02-08;01:52:07;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:52:07;1;Application;Informational;"Date: 08/02/2023 01:52:07.217; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:52:29;1;General;Informational;================================================================;
+2023-02-08;01:52:29;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:52:29;1;Application;Informational;"Date: 08/02/2023 01:52:29.616; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:53:08;1;General;Informational;================================================================;
+2023-02-08;01:53:08;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:53:08;1;Application;Informational;"Date: 08/02/2023 01:53:08.928; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:53:51;1;General;Informational;================================================================;
+2023-02-08;01:53:51;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:53:51;1;Application;Informational;"Date: 08/02/2023 01:53:51.755; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:54:50;1;General;Informational;================================================================;
+2023-02-08;01:54:50;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:54:50;1;Application;Informational;"Date: 08/02/2023 01:54:50.321; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:55:07;1;General;Informational;================================================================;
+2023-02-08;01:55:07;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:55:07;1;Application;Informational;"Date: 08/02/2023 01:55:07.657; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:55:43;1;General;Informational;================================================================;
+2023-02-08;01:55:43;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:55:43;1;Application;Informational;"Date: 08/02/2023 01:55:43.961; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:56:37;1;General;Informational;================================================================;
+2023-02-08;01:56:37;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:56:37;1;Application;Informational;"Date: 08/02/2023 01:56:37.147; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:57:23;1;General;Informational;================================================================;
+2023-02-08;01:57:23;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:57:23;1;Application;Informational;"Date: 08/02/2023 01:57:23.971; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:57:43;1;General;Informational;================================================================;
+2023-02-08;01:57:43;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:57:43;1;Application;Informational;"Date: 08/02/2023 01:57:43.776; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:59:05;1;General;Informational;================================================================;
+2023-02-08;01:59:05;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:59:05;1;Application;Informational;"Date: 08/02/2023 01:59:05.699; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:59:11;1;Application;Informational;"Date: 08/02/2023 01:59:11.205; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;01:59:49;1;General;Informational;================================================================;
+2023-02-08;01:59:49;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;01:59:49;1;Application;Informational;"Date: 08/02/2023 01:59:49.427; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;01:59:53;1;Application;Informational;"Date: 08/02/2023 01:59:53.838; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:00:37;1;General;Informational;================================================================;
+2023-02-08;02:00:37;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:00:37;1;Application;Informational;"Date: 08/02/2023 02:00:37.423; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:00:41;1;Application;Informational;"Date: 08/02/2023 02:00:41.941; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:00:58;1;General;Informational;================================================================;
+2023-02-08;02:00:58;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:00:58;1;Application;Informational;"Date: 08/02/2023 02:00:58.268; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:01:02;1;Application;Informational;"Date: 08/02/2023 02:01:02.530; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:01:52;1;General;Informational;================================================================;
+2023-02-08;02:01:52;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:01:52;1;Application;Informational;"Date: 08/02/2023 02:01:52.973; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:01:57;1;Application;Informational;"Date: 08/02/2023 02:01:57.185; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:02:41;1;General;Informational;================================================================;
+2023-02-08;02:02:41;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:02:41;1;Application;Informational;"Date: 08/02/2023 02:02:41.155; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:02:49;1;General;Informational;================================================================;
+2023-02-08;02:02:49;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:02:49;1;Application;Informational;"Date: 08/02/2023 02:02:49.960; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:02:54;1;Application;Informational;"Date: 08/02/2023 02:02:54.058; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:03:22;1;General;Informational;================================================================;
+2023-02-08;02:03:22;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:03:22;1;Application;Informational;"Date: 08/02/2023 02:03:22.275; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:03:26;1;Application;Informational;"Date: 08/02/2023 02:03:26.507; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:04:05;1;General;Informational;================================================================;
+2023-02-08;02:04:05;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:04:05;1;Application;Informational;"Date: 08/02/2023 02:04:05.302; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:04:13;1;Application;Informational;"Date: 08/02/2023 02:04:13.437; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:05:01;1;General;Informational;================================================================;
+2023-02-08;02:05:01;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-02-08;02:05:01;1;Application;Informational;"Date: 08/02/2023 02:05:01.378; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-02-08;02:05:23;1;Application;Informational;"Date: 08/02/2023 02:05:23.698; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-02-08;02:05:41;1;Application;Informational;"Date: 08/02/2023 02:05:41.809; WhereItCameFrom: srchButton_Click; Message: Patient found:"

@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logger;
+using System.Security.Cryptography.X509Certificates;
+using System.Data.Entity;
 
 namespace CabinetDataStore.Business.Services
 {
@@ -16,11 +19,20 @@ namespace CabinetDataStore.Business.Services
     {
         public List<ExaminationModel> GetAllExaminationsByPatientID(long patientId)
         {
-            using (CabinetEntities context = new CabinetEntities())
+            try
             {
-                var Examinations = context.ExaminationsData.Where(x => x.PatientId == patientId).ToList();
-
-                return Mapper.Map<List<ExaminationModel>>(Examinations);
+                using (CabinetEntities context = new CabinetEntities())
+                {
+                    var Examinations = context.ExaminationsData.Where(x => x.PatientId == patientId).ToList();
+                    
+                    return Mapper.Map<List<ExaminationModel>>(Examinations);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Informational($"Critical at class::{this.GetType().Name}");
+                LoggerManager.Critical(ex);
+                return null;
             }
         }
 
@@ -99,6 +111,44 @@ namespace CabinetDataStore.Business.Services
 
                     return result;
                 }
+            }
+        }
+
+        public int ExaminationsCount()
+        {
+            try 
+            {
+                using (CabinetEntities context = new CabinetEntities())
+                {
+                    var examinations = context.ExaminationsData.Count();
+
+                    return examinations;
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LoggerManager.Critical(ex);
+                return 0;
+            }
+        }
+
+        public List<ExaminationModel> GetExaminationsByDate(DateTime date)
+        {
+            try
+            {
+                using (CabinetEntities context = new CabinetEntities())
+                {
+                    var examinations = context.ExaminationsData.Where(x => DbFunctions.TruncateTime(x.ExaminationDate) == date.Date).ToList();
+
+                    return Mapper.Map<List<ExaminationModel>>(examinations);
+                }
+
+            }
+            catch(Exception ex) 
+            {
+                LoggerManager.Informational($"Critical at class::{this.GetType().Name}");
+                LoggerManager.Critical(ex);
+                return null;
             }
         }
     }
