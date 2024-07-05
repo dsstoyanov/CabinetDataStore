@@ -19,7 +19,5 @@ namespace CabinetDataStore.Business.Abstraction
         bool InsertPatient (PatientModel patient);
 
         bool UpdatePatient(PatientModel patient);
-
-        int PatientsCount();
     }
 }

@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefusal = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -55,34 +51,24 @@
             this.comboFilter = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.refreshExamDate = new System.Windows.Forms.Button();
-            this.pickExam = new System.Windows.Forms.DateTimePicker();
             this.dgvDaily = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvAll = new System.Windows.Forms.DataGridView();
             this.pID = new System.Windows.Forms.TextBox();
             this.refreshTimer = new System.Windows.Forms.Timer(this.components);
             this.timerProgress = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.справкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.patientsCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.examinationsCountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.направиАрхивНаБазатаДанниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpPatientData.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaily)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRefusal
             // 
             this.btnRefusal.Enabled = false;
-            this.btnRefusal.Location = new System.Drawing.Point(945, 548);
+            this.btnRefusal.Location = new System.Drawing.Point(945, 534);
             this.btnRefusal.Name = "btnRefusal";
             this.btnRefusal.Size = new System.Drawing.Size(75, 23);
             this.btnRefusal.TabIndex = 28;
@@ -92,7 +78,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(722, 548);
+            this.btnEdit.Location = new System.Drawing.Point(722, 534);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 23);
             this.btnEdit.TabIndex = 27;
@@ -103,7 +89,7 @@
             // btnSave
             // 
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(1026, 548);
+            this.btnSave.Location = new System.Drawing.Point(1026, 534);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 23);
             this.btnSave.TabIndex = 24;
@@ -113,7 +99,7 @@
             // 
             // btnNewPatient
             // 
-            this.btnNewPatient.Location = new System.Drawing.Point(809, 548);
+            this.btnNewPatient.Location = new System.Drawing.Point(809, 534);
             this.btnNewPatient.Name = "btnNewPatient";
             this.btnNewPatient.Size = new System.Drawing.Size(131, 23);
             this.btnNewPatient.TabIndex = 23;
@@ -135,7 +121,7 @@
             this.grpPatientData.Controls.Add(this.label1);
             this.grpPatientData.Controls.Add(this.label2);
             this.grpPatientData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.grpPatientData.Location = new System.Drawing.Point(12, 134);
+            this.grpPatientData.Location = new System.Drawing.Point(12, 120);
             this.grpPatientData.Name = "grpPatientData";
             this.grpPatientData.Size = new System.Drawing.Size(495, 149);
             this.grpPatientData.TabIndex = 21;
@@ -159,6 +145,7 @@
             this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtBirthDate.Location = new System.Drawing.Point(113, 72);
             this.dtBirthDate.Name = "dtBirthDate";
+            this.dtBirthDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtBirthDate.Size = new System.Drawing.Size(222, 20);
             this.dtBirthDate.TabIndex = 29;
             this.dtBirthDate.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -251,7 +238,7 @@
             // 
             // srchButton
             // 
-            this.srchButton.Location = new System.Drawing.Point(400, 91);
+            this.srchButton.Location = new System.Drawing.Point(400, 77);
             this.srchButton.Name = "srchButton";
             this.srchButton.Size = new System.Drawing.Size(95, 23);
             this.srchButton.TabIndex = 15;
@@ -300,7 +287,7 @@
             this.groupBox4.Controls.Add(this.dtFilterDate);
             this.groupBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 26);
+            this.groupBox4.Location = new System.Drawing.Point(12, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(483, 59);
             this.groupBox4.TabIndex = 32;
@@ -309,38 +296,14 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.refreshExamDate);
-            this.groupBox3.Controls.Add(this.pickExam);
             this.groupBox3.Controls.Add(this.dgvDaily);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(513, 26);
+            this.groupBox3.Location = new System.Drawing.Point(513, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(593, 257);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Прегледи за ден";
-            // 
-            // refreshExamDate
-            // 
-            this.refreshExamDate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("refreshExamDate.BackgroundImage")));
-            this.refreshExamDate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.refreshExamDate.Location = new System.Drawing.Point(155, 13);
-            this.refreshExamDate.Name = "refreshExamDate";
-            this.refreshExamDate.Size = new System.Drawing.Size(39, 32);
-            this.refreshExamDate.TabIndex = 31;
-            this.refreshExamDate.UseVisualStyleBackColor = true;
-            this.refreshExamDate.Click += new System.EventHandler(this.refreshExamDate_Click);
-            // 
-            // pickExam
-            // 
-            this.pickExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.pickExam.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.pickExam.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.pickExam.Location = new System.Drawing.Point(15, 20);
-            this.pickExam.Name = "pickExam";
-            this.pickExam.Size = new System.Drawing.Size(134, 20);
-            this.pickExam.TabIndex = 30;
-            this.pickExam.Value = new System.DateTime(2023, 2, 11, 0, 0, 0, 0);
+            this.groupBox3.Text = "Прегледи за деня";
             // 
             // dgvDaily
             // 
@@ -351,38 +314,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDaily.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDaily.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvDaily.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDaily.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDaily.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDaily.EnableHeadersVisualStyles = false;
-            this.dgvDaily.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDaily.Location = new System.Drawing.Point(15, 49);
+            this.dgvDaily.Location = new System.Drawing.Point(15, 31);
             this.dgvDaily.Name = "dgvDaily";
             this.dgvDaily.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDaily.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDaily.RowHeadersVisible = false;
-            this.dgvDaily.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dgvDaily.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvDaily.RowTemplate.DefaultCellStyle.Format = "T";
-            this.dgvDaily.RowTemplate.DefaultCellStyle.NullValue = null;
-            this.dgvDaily.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvDaily.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvDaily.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDaily.Size = new System.Drawing.Size(562, 190);
+            this.dgvDaily.Size = new System.Drawing.Size(562, 208);
             this.dgvDaily.TabIndex = 11;
             this.dgvDaily.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDaily_CellMouseDoubleClick);
             // 
@@ -390,7 +329,7 @@
             // 
             this.groupBox2.Controls.Add(this.dgvAll);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 289);
+            this.groupBox2.Location = new System.Drawing.Point(12, 275);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1094, 253);
             this.groupBox2.TabIndex = 34;
@@ -406,27 +345,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAll.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAll.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAll.EnableHeadersVisualStyles = false;
-            this.dgvAll.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvAll.Location = new System.Drawing.Point(15, 31);
             this.dgvAll.Name = "dgvAll";
             this.dgvAll.ReadOnly = true;
             this.dgvAll.RowHeadersVisible = false;
-            this.dgvAll.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.dgvAll.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvAll.RowTemplate.DefaultCellStyle.NullValue = null;
-            this.dgvAll.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SteelBlue;
-            this.dgvAll.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvAll.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAll.Size = new System.Drawing.Size(1063, 204);
             this.dgvAll.TabIndex = 11;
@@ -434,7 +358,7 @@
             // 
             // pID
             // 
-            this.pID.Location = new System.Drawing.Point(12, 91);
+            this.pID.Location = new System.Drawing.Point(12, 77);
             this.pID.Name = "pID";
             this.pID.Size = new System.Drawing.Size(81, 20);
             this.pID.TabIndex = 35;
@@ -450,68 +374,11 @@
             this.timerProgress.Interval = 1000;
             this.timerProgress.Tick += new System.EventHandler(this.timerProgress_Tick);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.справкиToolStripMenuItem,
-            this.файлToolStripMenuItem,
-            this.testToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1118, 24);
-            this.menuStrip1.TabIndex = 36;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // справкиToolStripMenuItem
-            // 
-            this.справкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.patientsCountToolStripMenuItem,
-            this.examinationsCountToolStripMenuItem});
-            this.справкиToolStripMenuItem.Name = "справкиToolStripMenuItem";
-            this.справкиToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.справкиToolStripMenuItem.Text = "Справки";
-            // 
-            // patientsCountToolStripMenuItem
-            // 
-            this.patientsCountToolStripMenuItem.Name = "patientsCountToolStripMenuItem";
-            this.patientsCountToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.patientsCountToolStripMenuItem.Text = "Брой пациенти";
-            this.patientsCountToolStripMenuItem.Click += new System.EventHandler(this.patientsCountToolStripMenuItem_Click);
-            // 
-            // examinationsCountToolStripMenuItem
-            // 
-            this.examinationsCountToolStripMenuItem.Name = "examinationsCountToolStripMenuItem";
-            this.examinationsCountToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.examinationsCountToolStripMenuItem.Text = "Брой прегледи";
-            this.examinationsCountToolStripMenuItem.Click += new System.EventHandler(this.examinationsCountToolStripMenuItem_Click);
-            // 
-            // файлToolStripMenuItem
-            // 
-            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.направиАрхивНаБазатаДанниToolStripMenuItem});
-            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            this.файлToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.файлToolStripMenuItem.Text = "Операции";
-            // 
-            // направиАрхивНаБазатаДанниToolStripMenuItem
-            // 
-            this.направиАрхивНаБазатаДанниToolStripMenuItem.Name = "направиАрхивНаБазатаДанниToolStripMenuItem";
-            this.направиАрхивНаБазатаДанниToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.направиАрхивНаБазатаДанниToolStripMenuItem.Text = "Database архив";
-            this.направиАрхивНаБазатаДанниToolStripMenuItem.Click += new System.EventHandler(this.archiveDatabaseToolStripMenuItem_Click);
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
-            // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 575);
+            this.ClientSize = new System.Drawing.Size(1118, 563);
             this.Controls.Add(this.pID);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
@@ -522,8 +389,6 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnNewPatient);
             this.Controls.Add(this.grpPatientData);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "PatientForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Patients Data";
@@ -537,8 +402,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaily)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAll)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,15 +437,6 @@
         private System.Windows.Forms.TextBox pID;
         private System.Windows.Forms.Timer refreshTimer;
         private System.Windows.Forms.Timer timerProgress;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem направиАрхивНаБазатаДанниToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem справкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem patientsCountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem examinationsCountToolStripMenuItem;
-        private System.Windows.Forms.DateTimePicker pickExam;
-        private System.Windows.Forms.Button refreshExamDate;
-        private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
     }
 }
 

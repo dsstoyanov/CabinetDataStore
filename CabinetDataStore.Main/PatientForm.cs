@@ -2,17 +2,12 @@
 using CabinetDataStore.BusinessService.Enums;
 using CabinetDataStore.BusinessService.ExaminationModels;
 using CabinetDataStore.BusinessService.PatientModels;
-using Logger;
-using Ninject.Infrastructure.Introspection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,10 +33,9 @@ namespace CabinetDataStore.Main
             InitializeComponent();
             refreshTimer.Start();
             refreshTimer.Interval = 1;
-            
+            Logger.LoggerManager.Informational($"asd", this.GetType().Name);
             this.patientService = patientService;
             this.examinationService = examinationService;
-            Logger.LoggerManager.Informational($"Load Patients form", this.GetType().Name);
         }
 
         public PatientForm(IPatient patientService, IExamination examinationService, PatientModel patient)
@@ -123,7 +117,6 @@ namespace CabinetDataStore.Main
                 if (PatientData.Count == 1)
                 {
                     ShowPatientData(PatientData);
-                    Logger.LoggerManager.Informational($"Patient found:");
                 }
 
                 else if (PatientData.Count != 0 && PatientData.Count > 1)
@@ -219,20 +212,13 @@ namespace CabinetDataStore.Main
                 grpPatientData.Text = $"Пациент N: {patient.PatientId}";
 
                 patient.Examinations = examinationService.GetAllExaminationsByPatientID(patient.PatientId);
-                if (patient.Examinations != null)
+                //dtExamination.Clear();
+                foreach (var examination in patient.Examinations)
                 {
-                    //dtExamination.Clear();
-                    foreach (var examination in patient.Examinations)
-                    {
-                        dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate, patient.BirthDate), patient.Examinations.Count() });
-                    }
-                    dgvAll.DataSource = dt;
-                    dgvAll.Focus();
+                    dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate, patient.BirthDate), patient.Examinations.Count() });
                 }
-                else
-                {
-                    MessageBox.Show($"Не са намерени прегледи. Вероятно е да има проблем.", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
+                dgvAll.DataSource = dt;
+                dgvAll.Focus();
             }
         }
 
@@ -337,7 +323,6 @@ namespace CabinetDataStore.Main
 
         private void PatientForm_Activated(object sender, EventArgs e)
         {
-            pickExam.Value = DateTime.Now;
             dt.Clear();
             RefreshDailyExaminations();
             dgvDaily.Columns["ID"].Width = 60;
@@ -459,113 +444,6 @@ namespace CabinetDataStore.Main
                     MessageBox.Show("Филтърът за търсене е по телефон. За въвеждане на име моля сменете филтъра.", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
-
-        private void archiveDatabaseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string backupLocation = ConfigurationManager.AppSettings["backup"];
-                Logger.LoggerManager.Informational($"[BackUp] Number of patiens: {patientService.PatientsCount()}, number of examinations: {examinationService.ExaminationsCount()}");
-                System.Diagnostics.Process.Start(backupLocation);
-                LoggerManager.Informational($"Database backup was created successfuly. Filename: BackUP_{ DateTime.Now.ToString("yyyyMMdd")}.dump");
-            }
-            catch (Exception ex)
-            {
-                LoggerManager.Informational($"Could not create backup of the database.");
-                LoggerManager.Critical(ex);
-            }
-        }
-
-        private void patientsCountToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var patientsCount = patientService.PatientsCount();
-            MessageBox.Show($"Пациенти: {patientsCount}", "Справка пациенти");
-        }
-
-        private void examinationsCountToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var examinationsCount = examinationService.ExaminationsCount();
-            MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи");
-        }
-
-        private void refreshExamDate_Click(object sender, EventArgs e)
-        {
-            var dateToPick = pickExam.Value;
-            dtExamination.Clear();
-
-            var examinations = examinationService.GetExaminationsByDate(dateToPick);
-            if (examinations.Count != 0 || examinations.Count > 0)
-            {
-                foreach (var exam in examinations)
-                {
-                    var patient = patientService.GetPatientById(exam.PatientId);
-                    dtExamination.Rows.Add(new object[]
-                        {
-                            exam.ExaminationID,
-                            patient.PatientName,
-                            exam.ExaminationDate,
-                            patient.PatientId
-                        });
-                }
-            }
-
-            dgvDaily.Columns["ID"].Width = 60;
-            dgvDaily.Columns["Пациент"].Width = 250;
-            dgvDaily.Columns["Дата на прегледа"].Width = 150;
-            dgvDaily.Columns["Пациент ID"].Width = 1;
-            this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
-            dgvDaily.DataSource = dtExamination;
-        }
-
-        private async void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Set up HttpClient
-            using (HttpClient client = new HttpClient())
-            {
-                // Set the API endpoint for authentication
-                string authUrl = "https://ptest-auth.his.bg/token";
-
-                // Add any required parameters to the URL or headers
-                //string queryString = "?param1=value1&param2=value2";
-
-                // Construct the full request URL
-                string fullUrl = authUrl; //+ queryString;
-
-                // Load the QES certificate
-                //X509Certificate2 certificate = LoadCertificate("C:\\Users\\STOYANOV\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\\LocalState\\rootfs\\usr\\share\\ca-certificates\\mozilla", "");
-
-                // Attach the certificate to the HttpClient
-               // client.DefaultRequestHeaders.Add("X-Client-Certificate", Convert.ToBase64String(certificate.Export(X509ContentType.Cert)));
-
-                // Build the HttpRequestMessage
-                var request = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri(fullUrl)
-                };
-
-                // Send the request and get the response
-                HttpResponseMessage response =  await client.SendAsync(request);
-
-                // Handle the response
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Success! Response: {responseBody}");
-                }
-                else
-                {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Error! Status code: {response.StatusCode}");
-                }
-            }
-        }
-
-        static X509Certificate2 LoadCertificate(string certificatePath, string certificatePassword)
-        {
-            // Load the QES certificate from the specified path and password
-            return new X509Certificate2(certificatePath, certificatePassword, X509KeyStorageFlags.Exportable);
         }
     }
 }

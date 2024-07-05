@@ -86,24 +86,6 @@ namespace CabinetDataStore.Business.Services
             }
         }
 
-        public int PatientsCount()
-        {
-            try
-            {
-                using (CabinetEntities context = new CabinetEntities())
-                {
-                    var patients = context.PatientsData.Count();
-
-                    return patients;
-                }
-            }
-            catch (Exception ex)
-            {
-                Logger.LoggerManager.Critical(ex);
-                return 0;
-            }
-        }
-
         public bool UpdatePatient(PatientModel patient)
         {
             bool result = false;
