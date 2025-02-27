@@ -2,6 +2,9 @@
 using CabinetDataStore.Business.Models;
 using CabinetDataStore.BusinessService.ExaminationModels;
 using CabinetDataStore.BusinessService.PatientModels;
+using DevExpress.Internal.WinApi.Windows.UI.Notifications;
+using DevExpress.Printing.ExportHelpers;
+using DevExpress.XtraPrinting.Native;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +41,7 @@ namespace CabinetDataStore.Main
             txtExamDate.Text = DateTime.Now.ToString();
 
             NewExaminationProperties(false);
+
             this.Focus();
         }
 
@@ -293,7 +297,7 @@ namespace CabinetDataStore.Main
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            PrintDialog printDialog = new PrintDialog();
+            System.Windows.Forms.PrintDialog printDialog = new System.Windows.Forms.PrintDialog();
 
             PrintDocument printDocument = new PrintDocument();
 
@@ -333,10 +337,10 @@ namespace CabinetDataStore.Main
             Font only = new Font("Arial", 7);
             SolidBrush brush = new SolidBrush(Color.Black);
             Point loc = new Point(10, 20);
-            g.DrawImage(CabinetDataStore.Main.Properties.Resources.konrnovki_new_antetka1, loc);
+            g.DrawImage(CabinetDataStore.Main.Properties.Resources.konrnovkinewantetka11, loc);
 
             Point loc1 = new Point(10, 170);
-            g.DrawImage(CabinetDataStore.Main.Properties.Resources.konrnovki_new_antetka2, loc1);
+            g.DrawImage(CabinetDataStore.Main.Properties.Resources.konrnovkinewantetka21, loc1);
 
             Point loc2 = new Point(40, 665);
             Image im = picColposcopy.Image;
@@ -522,5 +526,295 @@ namespace CabinetDataStore.Main
         {
             NewExaminationProperties(true);
         }
+
+        //Test button - maybe will be released when HTML rendering of the printing is ready.
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string headerImage1 = "file:///C:/Users/STOYANOV/source/repos/CabinetDataStore/CabinetDataStore.Main/Resources/konrnovkinewantetka11.png";
+            string headerImage2 = "file:///C:/Users/STOYANOV/source/repos/CabinetDataStore/CabinetDataStore.Main/Resources/konrnovkinewantetka21.png";
+            string colposcopyImage = "file:///C:/Users/STOYANOV/source/repos/CabinetDataStore/CabinetDataStore.Main/Resources/konrnovkinewantetka21.png";
+
+            // Your HTML content
+            string htmlContent = @"
+              <!DOCTYPE html>
+<html lang=""bg"">
+<head>
+    <meta charset=""UTF-8"">
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1.0"">
+    <title>Медицински Формуляр</title>
+    <style>
+        /* Глобални стилове */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 900px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #004e92;
+            border-bottom: 3px solid #004e92;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 220px;
+            margin-bottom: 10px;
+        }
+
+        .wide-column {
+            flex: 3;
+        }
+
+        .single-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #004e92;
+            box-shadow: 0 0 8px rgba(0, 78, 146, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 30px;
+        }
+
+        /* Стилове за печат */
+        @media print {
+            body {
+                font-size: 12px;
+                margin: 0;
+                background: none;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 100%;
+                padding: 10px;
+                border-radius: 0;
+                box-shadow: none;
+                page-break-before: always;
+            }
+
+            .section-title {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .column, .wide-column {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+            input, textarea {
+                font-size: 12px;
+                padding: 8px;
+                width: auto;
+                min-width: 200px;
+            }
+
+            .footer {
+                font-size: 10px;
+                color: #333;
+                margin-top: 20px;
+            }
+
+            /* Промените за секцията ""Оплаквания"" и ""Анамнеза"" */
+            .wide-column {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .wide-column .row {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 20px;
+                justify-content: space-between;
+            }
+
+            .wide-column .column {
+                flex: 1;
+                min-width: 220px;
+            }
+
+            .wide-column .column input {
+                width: 100%;
+            }
+
+            /* Поставяне на Анамнеза и Оплаквания на един ред */
+            .dual-column {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .dual-column .single-column {
+                flex: 1;
+                margin-right: 20px;
+            }
+
+            .dual-column .wide-column {
+                flex: 2;
+            }
+
+            .container {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                size: A4;
+                margin: 20mm;
+            }
+
+            /* Премахване на маргини и padding за печат */
+            h1, h2, h3, p, div {
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Премахване на разместване в колоните при печат */
+            .row, .column {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class=""container"">
+        <div class=""row"">
+            <div class=""column""><label>Дата/час:</label><input type=""text"" value=""Test123""></div>
+            <div class=""column""><label>Пациент:</label><input type=""text"" value=""Test123""></div>
+        </div>
+        
+        <!-- Използваме новия контейнер .dual-column за подреждане на Анамнеза и Оплаквания на един ред -->
+        <div class=""dual-column"">
+            <div class=""single-column"">
+                <div class=""section-title"">Анамнеза</div>
+                <label>ПРМ:</label><input type=""text"" value=""Test123"">
+                <label>Раждания:</label><input type=""text"" value=""Test123"">
+                <label>Операции:</label><input type=""text"" value=""Test123"">
+            </div>
+            
+            <div class=""wide-column"">
+                <div class=""section-title"">Оплаквания</div>
+                
+                <!-- Първи ред с Болка и Флуор -->
+                <div class=""row"">
+                    <div class=""column"">
+                        <label>Болка:</label><input type=""text"" value=""Test123"">
+                    </div>
+                    <div class=""column"">
+                        <label>Флуор:</label><input type=""text"" value=""Test123"">
+                    </div>
+                </div>
+                
+                <!-- Втори ред с Кръвене и Други -->
+                <div class=""row"">
+                    <div class=""column"">
+                        <label>Кръвене:</label><input type=""text"" value=""Test123"">
+                    </div>
+                    <div class=""column"">
+                        <label>Други:</label><input type=""text"" value=""Test123"">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class=""section-title"">Обективни симптоми</div>
+        <div class=""row"">
+            <div class=""column""><label>Колоноскопия:</label><input type=""text"" value=""Test123""></div>
+            <div class=""column""><label>Ехография:</label><input type=""text"" value=""Test123""></div>
+        </div>
+        <div class=""row"">
+            <div class=""column""><label>Диагноза:</label><input type=""text"" value=""Test123""></div>
+            <div class=""column""><label>Резултати от изследвания:</label><input type=""text"" value=""Test123""></div>
+        </div>
+        
+        <div class=""section-title"">Терапия и Препоръки</div>
+        <div class=""row"">
+            <div class=""column""><label>Терапия:</label><input type=""text"" value=""Test123""></div>
+            <div class=""column""><label>Препоръки:</label><input type=""text"" value=""Test123""></div>
+        </div>
+        
+        <div class=""footer"">
+            <p>Проф. Явор Корновски | © 2025</p>
+        </div>
+    </div>
+</body>
+</html>
+";
+
+            // Create WebBrowser control and load HTML
+            WebBrowser webBrowser = new WebBrowser();
+            webBrowser.DocumentText = htmlContent;
+
+            // Wait for the document to fully load before printing
+            webBrowser.DocumentCompleted += (s, args) =>
+            {
+                // Print the document
+                webBrowser.Print();
+            };
+        }
+
+
     }
 }

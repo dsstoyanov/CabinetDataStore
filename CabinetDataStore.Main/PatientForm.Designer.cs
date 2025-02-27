@@ -499,13 +499,7 @@
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Text = "Database архив";
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Click += new System.EventHandler(this.archiveDatabaseToolStripMenuItem_Click);
-            // 
-            // testToolStripMenuItem
-            // 
-            this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.testToolStripMenuItem.Text = "Test";
-            this.testToolStripMenuItem.Click += new System.EventHandler(this.testToolStripMenuItem_Click);
+            
             // 
             // PatientForm
             // 

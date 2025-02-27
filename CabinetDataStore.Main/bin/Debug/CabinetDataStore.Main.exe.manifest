@@ -62,7 +62,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FH3yBVSmcmTy56WUHEhyQ3SAk9DD7vmiV/H1IFl11Hc=</dsig:DigestValue>
+        <dsig:DigestValue>CyobzKjKDO5EX0VefRUPiMNFcRd8iawj9YvsveGYx2s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -74,19 +74,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YSA6Gs1ezstH/fDM13FMe7O1vzsCb30GMhI8fn/MRIg=</dsig:DigestValue>
+        <dsig:DigestValue>Z2+6qI8Wy/ssqNj6AgXLhPhIJ4ThkQck759D+JkJs5c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Main.exe" size="3046912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Main.exe" size="3080192">
       <assemblyIdentity name="CabinetDataStore.Main" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>YXowp+JuqFUbP4wI/+F4i5uimgl0d1qyKcxqdABkVHA=</dsig:DigestValue>
+        <dsig:DigestValue>3mL7BAveyH3xllzhCoVG1JKjUwsLOMCueiCe4rGVVy4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -397,6 +397,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>qaDcItPaZjkAzsRVJ2cKAkDo1BZETmdlKG4FE0TtDFU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\konrnovkinewantetka11.png" size="77119">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qa5Rd2rNyMYdJiorQ8yD1nlcz8EOW5kN8P3uFsbMpHM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\konrnovkinewantetka21.png" size="50365">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>paS2p1QDPdQrnbRTuJYPX9Qpqt6YIE9Nlrbf8+G86Pw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sid_logo.ico" size="125726">

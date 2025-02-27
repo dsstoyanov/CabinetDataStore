@@ -364,7 +364,6 @@ C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\Cab
 C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.application
 C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\LoggerManager.pdb
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.AssemblyReference.cache
-C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.SuggestedBindingRedirects.cache
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.AddPatient.resources
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ChoosePatient.resources
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ExaminationsForm.resources
@@ -420,4 +419,4 @@ C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CoreCompileInputs.cache
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.manifest
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.application
-C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CopyComplete
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetD.69CEB64F.Up2Date

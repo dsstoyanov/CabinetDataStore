@@ -220,6 +220,6 @@ C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\bin\De
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\bin\Debug\System.ValueTuple.xml
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetDataStore.BusinessService.csproj.AssemblyReference.cache
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetDataStore.BusinessService.csproj.CoreCompileInputs.cache
-C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetDataStore.BusinessService.csproj.CopyComplete
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetDataStore.Business.dll
 C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetDataStore.Business.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\obj\Debug\CabinetD.C52F0AB9.Up2Date

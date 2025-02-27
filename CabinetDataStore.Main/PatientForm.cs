@@ -517,55 +517,5 @@ namespace CabinetDataStore.Main
             this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
             dgvDaily.DataSource = dtExamination;
         }
-
-        private async void testToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            // Set up HttpClient
-            using (HttpClient client = new HttpClient())
-            {
-                // Set the API endpoint for authentication
-                string authUrl = "https://ptest-auth.his.bg/token";
-
-                // Add any required parameters to the URL or headers
-                //string queryString = "?param1=value1&param2=value2";
-
-                // Construct the full request URL
-                string fullUrl = authUrl; //+ queryString;
-
-                // Load the QES certificate
-                //X509Certificate2 certificate = LoadCertificate("C:\\Users\\STOYANOV\\AppData\\Local\\Packages\\CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc\\LocalState\\rootfs\\usr\\share\\ca-certificates\\mozilla", "");
-
-                // Attach the certificate to the HttpClient
-               // client.DefaultRequestHeaders.Add("X-Client-Certificate", Convert.ToBase64String(certificate.Export(X509ContentType.Cert)));
-
-                // Build the HttpRequestMessage
-                var request = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri(fullUrl)
-                };
-
-                // Send the request and get the response
-                HttpResponseMessage response =  await client.SendAsync(request);
-
-                // Handle the response
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Success! Response: {responseBody}");
-                }
-                else
-                {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Error! Status code: {response.StatusCode}");
-                }
-            }
-        }
-
-        static X509Certificate2 LoadCertificate(string certificatePath, string certificatePassword)
-        {
-            // Load the QES certificate from the specified path and password
-            return new X509Certificate2(certificatePath, certificatePassword, X509KeyStorageFlags.Exportable);
-        }
     }
 }

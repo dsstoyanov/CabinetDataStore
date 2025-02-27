@@ -255,12 +255,6 @@
     <None Include="Resources\Hopstarter-Soft-Scraps-Folder-Explorer.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\konrnovki new antetka11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\konrnovki new antetka21.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\loading.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +270,8 @@
     <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\konrnovkinewantetka11.png" />
+    <Content Include="Resources\konrnovkinewantetka21.png" />
     <Content Include="sid_logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
