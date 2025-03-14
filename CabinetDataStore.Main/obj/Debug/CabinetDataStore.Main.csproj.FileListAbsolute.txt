@@ -1,0 +1,479 @@
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.config
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.pdb
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\AutoMapper.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Data.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Utils.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraGrid.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraLayout.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraPrinting.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Ninject.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ValueTuple.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraBars.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.RichEdit.v18.2.Core.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraTreeList.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Office.v18.2.Core.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Images.v18.2.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.pdb
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.pdb
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll.config
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\AutoMapper.pdb
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\AutoMapper.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Data.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Utils.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraGrid.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraLayout.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraPrinting.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Ninject.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ValueTuple.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraBars.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.RichEdit.v18.2.Core.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.XtraTreeList.v18.2.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\DevExpress.Office.v18.2.Core.xml
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\de\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\es\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csprojAssemblyReference.cache
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.PatientForm.resources
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.Properties.Resources.resources
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.GenerateResource.cache
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.licenses
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CoreCompileInputs.cache
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CopyComplete
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.pdb
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Microsoft.Win32.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\netstandard.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.AppContext.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Collections.Concurrent.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Collections.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Collections.NonGeneric.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Collections.Specialized.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ComponentModel.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ComponentModel.EventBasedAsync.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ComponentModel.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ComponentModel.TypeConverter.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Console.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Data.Common.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.Contracts.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.Debug.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.FileVersionInfo.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.Process.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.StackTrace.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.Tools.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.TraceSource.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Diagnostics.Tracing.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Drawing.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Dynamic.Runtime.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Globalization.Calendars.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Globalization.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Globalization.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.Compression.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.Compression.ZipFile.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.FileSystem.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.FileSystem.DriveInfo.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.FileSystem.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.FileSystem.Watcher.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.IsolatedStorage.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.MemoryMappedFiles.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.Pipes.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.IO.UnmanagedMemoryStream.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Linq.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Linq.Expressions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Linq.Parallel.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Linq.Queryable.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Http.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.NameResolution.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.NetworkInformation.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Ping.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Requests.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Security.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.Sockets.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.WebHeaderCollection.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.WebSockets.Client.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Net.WebSockets.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.ObjectModel.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Reflection.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Reflection.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Reflection.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Resources.Reader.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Resources.ResourceManager.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Resources.Writer.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Handles.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.InteropServices.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Numerics.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Serialization.Formatters.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Serialization.Json.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Serialization.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.Serialization.Xml.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Claims.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Cryptography.Algorithms.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Cryptography.Csp.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Cryptography.Encoding.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Cryptography.Primitives.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Cryptography.X509Certificates.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.Principal.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Security.SecureString.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Encoding.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Encoding.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.RegularExpressions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Overlapped.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Parallel.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Thread.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.ThreadPool.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Timer.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.ReaderWriter.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.XDocument.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.XmlDocument.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.XmlSerializer.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.XPath.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Xml.XPath.XDocument.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Npgsql.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Buffers.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Memory.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Json.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\Npgsql.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Buffers.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Memory.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Text.Json.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.config
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ExaminationsForm.resources
+C:\Users\didkk\Source\Repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.AddPatient.resources
+C:\Users\didkk\source\repos\CabinetDataStore2\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ChoosePatient.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.config
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.pdb
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Data.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Printing.v18.2.Core.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Utils.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraEditors.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraGrid.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraLayout.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraPrinting.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Pdf.v18.2.Core.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Sparkline.v18.2.Core.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraBars.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.RichEdit.v18.2.Core.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraTreeList.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Office.v18.2.Core.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Images.v18.2.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.pdb
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.pdb
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll.config
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.pdb
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Data.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Printing.v18.2.Core.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Utils.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraEditors.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraGrid.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraLayout.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraPrinting.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Pdf.v18.2.Core.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Sparkline.v18.2.Core.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraBars.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.RichEdit.v18.2.Core.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.XtraTreeList.v18.2.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\DevExpress.Office.v18.2.Core.xml
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Data.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Printing.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Utils.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraEditors.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraGrid.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraLayout.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraPrinting.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Pdf.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Sparkline.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraBars.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.RichEdit.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.XtraTreeList.v18.2.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\de\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\es\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ja\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\ru\DevExpress.Office.v18.2.Core.resources.dll
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csprojAssemblyReference.cache
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.AddPatient.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ChoosePatient.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ExaminationsForm.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.PatientForm.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.Properties.Resources.resources
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.GenerateResource.cache
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.licenses
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CoreCompileInputs.cache
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CopyComplete
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.pdb
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.manifest
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.application
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.manifest
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.application
+C:\Users\didkk\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\LoggerManager.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.AssemblyReference.cache
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.AddPatient.resources
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ChoosePatient.resources
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ExaminationsForm.resources
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.PatientForm.resources
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.Properties.Resources.resources
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.GenerateResource.cache
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.licenses
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.config
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.manifest
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.application
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.dll
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll.config
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.pdb
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.xml
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CoreCompileInputs.cache
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.manifest
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.application
+C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetD.69CEB64F.Up2Date
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.config
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe.manifest
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.application
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.exe
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Main.pdb
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.dll
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.BusinessService.pdb
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.pdb
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\CabinetDataStore.Business.dll.config
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.pdb
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\AutoMapper.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework.SqlServer.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\EntityFramework6.Npgsql.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Ninject.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\Npgsql.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Buffers.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Memory.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Numerics.Vectors.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Encodings.Web.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Text.Json.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Channels.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\bin\Debug\System.ValueTuple.xml
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.AssemblyReference.cache
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.AddPatient.resources
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ChoosePatient.resources
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.ExaminationsForm.resources
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.PatientForm.resources
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.Properties.Resources.resources
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.GenerateResource.cache
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.licenses
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.csproj.CoreCompileInputs.cache
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe.manifest
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.application
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetD.69CEB64F.Up2Date
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.exe
+D:\Github Repos\CabinetDataStore\CabinetDataStore.Main\obj\Debug\CabinetDataStore.Main.pdb

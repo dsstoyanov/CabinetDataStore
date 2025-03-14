@@ -1,0 +1,175 @@
+Date;Time;Thread ID;Log Type;Log Level;Message;
+2023-01-29;01:04:06;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:04:06;1;Application;Informational;"Date: 29/01/2023 01:04:06.132; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:04:46;1;General;Informational;================================================================;
+2023-01-29;01:04:46;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:04:46;1;Application;Informational;"Date: 29/01/2023 01:04:46.856; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:05:34;1;General;Informational;================================================================;
+2023-01-29;01:05:34;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:05:34;1;Application;Informational;"Date: 29/01/2023 01:05:34.871; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:06:46;1;General;Informational;================================================================;
+2023-01-29;01:06:46;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:06:47;1;Application;Informational;"Date: 29/01/2023 01:06:47.011; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:12:27;1;General;Informational;================================================================;
+2023-01-29;01:12:27;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:12:27;1;Application;Informational;"Date: 29/01/2023 01:12:27.753; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:12:34;1;Application;Informational;"Date: 29/01/2023 01:12:34.657; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-01-29;01:14:13;1;General;Informational;================================================================;
+2023-01-29;01:14:13;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:14:13;1;Application;Informational;"Date: 29/01/2023 01:14:13.180; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:14:26;1;Application;Informational;"Date: 29/01/2023 01:14:26.942; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-01-29;01:14:32;1;Application;Informational;"Date: 29/01/2023 01:14:32.984; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-01-29;01:14:50;1;Application;Informational;"Date: 29/01/2023 01:14:50.331; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-01-29;01:15:39;1;Application;Informational;"Date: 29/01/2023 01:15:39.391; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2023-01-29;01:19:27;1;General;Informational;================================================================;
+2023-01-29;01:19:27;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:19:27;1;Application;Informational;"Date: 29/01/2023 01:19:27.925; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:23:32;1;General;Informational;================================================================;
+2023-01-29;01:23:32;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:23:32;1;Application;Informational;"Date: 29/01/2023 01:23:32.320; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:24:18;1;General;Informational;================================================================;
+2023-01-29;01:24:18;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:24:18;1;Application;Informational;"Date: 29/01/2023 01:24:18.987; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:25:01;1;General;Informational;================================================================;
+2023-01-29;01:25:01;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:25:01;1;Application;Informational;"Date: 29/01/2023 01:25:01.597; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:25:51;1;General;Informational;================================================================;
+2023-01-29;01:25:51;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:25:51;1;Application;Informational;"Date: 29/01/2023 01:25:51.982; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:25:55;1;Application;Critical;"Date: 29/01/2023 01:25:55.728; WhereItCameFrom: GetAllExaminations; Source: AutoMapper; Message: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+; InnerException: ; HResult: -2146233088 ; InnerExceptionBase = 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+"
+2023-01-29;01:25:55;1;Public;Critical;"Date: 29/01/2023 01:25:55.728; WhereItCameFrom: GetAllExaminations; Source: AutoMapper; Message: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+; InnerException: ; HResult: -2146233088 ; InnerExceptionBase = 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+"
+2023-01-29;01:25:55;1;Debug;Critical;"   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 28
+   at AutoMapper.MapperConfiguration.AssertConfigurationIsValid(TypeMap typeMap) in C:\projects\automapper\src\AutoMapper\MapperConfiguration.cs:line 281
+   at lambda_method(Closure , Int32 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 211
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 76
+   at CabinetDataStore.Business.Services.ExaminationService.GetAllExaminations() in C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\Services\ExaminationService.cs:line 123
+"
+2023-01-29;01:25:58;1;Application;Critical;"Date: 29/01/2023 01:25:58.618; WhereItCameFrom: GetAllExaminations; Source: AutoMapper; Message: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+; InnerException: ; HResult: -2146233088 ; InnerExceptionBase = 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+"
+2023-01-29;01:25:58;1;Public;Critical;"Date: 29/01/2023 01:25:58.618; WhereItCameFrom: GetAllExaminations; Source: AutoMapper; Message: 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+; InnerException: ; HResult: -2146233088 ; InnerExceptionBase = 
+Unmapped members were found. Review the types and members below.
+Add a custom mapping expression, ignore, add a custom resolver, or modify the source/destination type
+For no matching constructor, add a no-arg ctor, add optional arguments, or map all of the constructor parameters
+==================================================================================================================================================================================================================
+AutoMapper created this type map for you, but your types cannot be mapped using the current configuration.
+Int32 -> List`1 (Destination member list)
+System.Int32 -> System.Collections.Generic.List`1[[CabinetDataStore.BusinessService.ExaminationModels.ExaminationModel, CabinetDataStore.BusinessService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] (Destination member list)
+
+Unmapped properties:
+Capacity
+"
+2023-01-29;01:25:58;1;Debug;Critical;"   at AutoMapper.ConfigurationValidator.AssertConfigurationIsValid(IEnumerable`1 typeMaps) in C:\projects\automapper\src\AutoMapper\ConfigurationValidator.cs:line 28
+   at AutoMapper.MapperConfiguration.AssertConfigurationIsValid(TypeMap typeMap) in C:\projects\automapper\src\AutoMapper\MapperConfiguration.cs:line 281
+   at lambda_method(Closure , Int32 , List`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.AutoMapper.IMapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 211
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 76
+   at CabinetDataStore.Business.Services.ExaminationService.GetAllExaminations() in C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Business\Services\ExaminationService.cs:line 123
+"
+2023-01-29;01:26:06;1;General;Informational;================================================================;
+2023-01-29;01:26:06;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:26:06;1;Application;Informational;"Date: 29/01/2023 01:26:06.839; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;01:27:42;1;General;Informational;================================================================;
+2023-01-29;01:27:42;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;01:27:42;1;Application;Informational;"Date: 29/01/2023 01:27:42.216; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;16:11:57;1;General;Informational;================================================================;
+2023-01-29;16:11:57;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;16:11:57;1;Application;Informational;"Date: 29/01/2023 16:11:57.145; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;16:12:00;1;Application;Informational;"Date: 29/01/2023 16:12:00.903; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: [BackUp] Number of patiens: 7654, number of examinations: 15289"
+2023-01-29;16:12:00;1;Application;Informational;"Date: 29/01/2023 16:12:00.913; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Could not create backup of the database."
+2023-01-29;16:12:00;1;Application;Critical;"Date: 29/01/2023 16:12:00.913; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Source: System; Message: The system cannot find the file specified; InnerException: ; HResult: -2147467259 ; InnerExceptionBase = The system cannot find the file specified"
+2023-01-29;16:12:00;1;Public;Critical;"Date: 29/01/2023 16:12:00.913; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Source: System; Message: The system cannot find the file specified; InnerException: ; HResult: -2147467259 ; InnerExceptionBase = The system cannot find the file specified"
+2023-01-29;16:12:00;1;Debug;Critical;"   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start()
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(String fileName)
+   at CabinetDataStore.Main.PatientForm.archiveDatabaseToolStripMenuItem_Click(Object sender, EventArgs e) in C:\Users\STOYANOV\source\repos\CabinetDataStore\CabinetDataStore.Main\PatientForm.cs:line 466
+"
+2023-01-29;16:33:33;1;General;Informational;================================================================;
+2023-01-29;16:33:33;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2023-01-29;16:33:34;1;Application;Informational;"Date: 29/01/2023 16:33:34.041; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2023-01-29;16:33:38;1;Application;Informational;"Date: 29/01/2023 16:33:38.842; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: [BackUp] Number of patiens: 7654, number of examinations: 15289"
+2023-01-29;16:33:38;1;Application;Informational;"Date: 29/01/2023 16:33:38.882; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Database backup was created successfuly. Filename: BackUP_20230129.dump"
+2023-01-29;16:35:05;1;Application;Informational;"Date: 29/01/2023 16:35:05.937; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: [BackUp] Number of patiens: 7654, number of examinations: 15289"
+2023-01-29;16:35:05;1;Application;Informational;"Date: 29/01/2023 16:35:05.954; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Database backup was created successfuly. Filename: BackUP_20230129.dump"
+2023-01-29;16:35:42;1;Application;Informational;"Date: 29/01/2023 16:35:42.820; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: [BackUp] Number of patiens: 7654, number of examinations: 15289"
+2023-01-29;16:35:42;1;Application;Informational;"Date: 29/01/2023 16:35:42.836; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Database backup was created successfuly. Filename: BackUP_20230129.dump"
+2023-01-29;16:37:06;1;Application;Informational;"Date: 29/01/2023 16:37:06.668; WhereItCameFrom: srchButton_Click; Message: Patient found:"

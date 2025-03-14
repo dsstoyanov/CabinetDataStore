@@ -1,0 +1,17 @@
+Date;Time;Thread ID;Log Type;Log Level;Message;
+2025-02-28;00:00:03;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2025-02-28;00:00:03;1;Application;Informational;"Date: 28.02.2025 00:00:03.604; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2025-02-28;00:00:30;1;Application;Informational;"Date: 28.02.2025 00:00:30.393; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2025-02-28;00:00:48;1;Application;Informational;"Date: 28.02.2025 00:00:48.311; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2025-02-28;00:24:32;1;General;Informational;================================================================;
+2025-02-28;00:24:32;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2025-02-28;00:24:33;1;Application;Informational;"Date: 28.02.2025 00:24:33.038; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2025-02-28;00:24:39;1;Application;Informational;"Date: 28.02.2025 00:24:39.273; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2025-02-28;00:29:28;1;General;Informational;================================================================;
+2025-02-28;00:29:28;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2025-02-28;00:29:28;1;Application;Informational;"Date: 28.02.2025 00:29:28.555; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2025-02-28;00:29:34;1;Application;Informational;"Date: 28.02.2025 00:29:34.521; WhereItCameFrom: srchButton_Click; Message: Patient found:"
+2025-02-28;00:40:55;1;General;Informational;================================================================;
+2025-02-28;00:40:55;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2025-02-28;00:40:55;1;Application;Informational;"Date: 28.02.2025 00:40:55.627; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2025-02-28;00:41:02;1;Application;Informational;"Date: 28.02.2025 00:41:02.645; WhereItCameFrom: srchButton_Click; Message: Patient found:"
