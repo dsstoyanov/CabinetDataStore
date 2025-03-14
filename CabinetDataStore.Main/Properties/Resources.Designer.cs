@@ -83,6 +83,16 @@ namespace CabinetDataStore.Main.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap full_header_2025 {
+            get {
+                object obj = ResourceManager.GetObject("full_header_2025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hopstarter_Soft_Scraps_Folder_Explorer {
             get {
                 object obj = ResourceManager.GetObject("Hopstarter-Soft-Scraps-Folder-Explorer", resourceCulture);
@@ -146,16 +156,6 @@ namespace CabinetDataStore.Main.Properties {
         internal static System.Drawing.Bitmap server_database {
             get {
                 object obj = ResourceManager.GetObject("server-database", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Untitled {
-            get {
-                object obj = ResourceManager.GetObject("Untitled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

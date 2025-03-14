@@ -270,6 +270,12 @@
     <None Include="Resources\Untitled.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\anetka2_2025.PNG" />
+    <None Include="Resources\antetka1_2025.PNG" />
+    <None Include="Resources\antetka_kornovski_2025.PNG" />
+    <None Include="Resources\antetka_2025.PNG" />
+    <None Include="Resources\antetka2025.PNG" />
+    <None Include="Resources\full_header_2025.PNG" />
     <Content Include="Resources\konrnovkinewantetka11.png" />
     <Content Include="Resources\konrnovkinewantetka21.png" />
     <Content Include="sid_logo.ico" />

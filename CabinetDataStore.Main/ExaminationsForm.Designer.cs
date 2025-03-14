@@ -76,9 +76,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtExaminationID = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.npgsqlCommand1 = new Npgsql.NpgsqlCommand();
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColposcopy)).BeginInit();
@@ -604,39 +602,17 @@
             this.label17.TabIndex = 51;
             this.label17.Text = "N:";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(307, 635);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "TEST";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // npgsqlCommand1
             // 
             this.npgsqlCommand1.AllResultTypesAreUnknown = false;
             this.npgsqlCommand1.Transaction = null;
             this.npgsqlCommand1.UnknownResultTypeList = null;
             // 
-            // webBrowser
-            // 
-            this.webBrowser.Location = new System.Drawing.Point(787, 664);
-            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.Size = new System.Drawing.Size(228, 24);
-            this.webBrowser.TabIndex = 53;
-            this.webBrowser.Visible = false;
-            // 
             // ExaminationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1014, 679);
-            this.Controls.Add(this.webBrowser);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txtExaminationID);
             this.Controls.Add(this.btnEdit);
@@ -722,8 +698,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtExaminationID;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button button1;
         private Npgsql.NpgsqlCommand npgsqlCommand1;
-        private System.Windows.Forms.WebBrowser webBrowser;
     }
 }

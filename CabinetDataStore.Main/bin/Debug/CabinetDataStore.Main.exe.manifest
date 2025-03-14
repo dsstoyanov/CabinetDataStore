@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Business.dll" size="16896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Business.dll" size="17408">
       <assemblyIdentity name="CabinetDataStore.Business" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CyobzKjKDO5EX0VefRUPiMNFcRd8iawj9YvsveGYx2s=</dsig:DigestValue>
+        <dsig:DigestValue>lC0mxXXWBjwky9jhDwJRHmLh0hE7jOiW5OxRoLUSHxE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Main.exe" size="3080192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CabinetDataStore.Main.exe" size="2900992">
       <assemblyIdentity name="CabinetDataStore.Main" version="1.0.1.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3mL7BAveyH3xllzhCoVG1JKjUwsLOMCueiCe4rGVVy4=</dsig:DigestValue>
+        <dsig:DigestValue>8jphX9FbXsbYdkUr6rqVhaeehtAltAC1FRYa4ArWu80=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
