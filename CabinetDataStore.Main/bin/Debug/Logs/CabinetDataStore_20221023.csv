@@ -1,0 +1,32 @@
+Date;Time;Thread ID;Log Type;Log Level;Message;
+2022-10-23;00:09:58;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:09:59;1;Application;Informational;"Date: 23/10/2022 00:09:59.697; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:10:08;1;General;Informational;================================================================;
+2022-10-23;00:10:08;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:10:09;1;Application;Informational;"Date: 23/10/2022 00:10:09.670; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:12:26;1;General;Informational;================================================================;
+2022-10-23;00:12:26;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:12:31;1;Application;Informational;"Date: 23/10/2022 00:12:31.288; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:13:03;1;General;Informational;================================================================;
+2022-10-23;00:13:03;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:13:03;1;Application;Informational;"Date: 23/10/2022 00:13:03.237; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:13:15;1;General;Informational;================================================================;
+2022-10-23;00:13:15;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:13:15;1;Application;Informational;"Date: 23/10/2022 00:13:15.118; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:14:21;1;General;Informational;================================================================;
+2022-10-23;00:14:21;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:14:22;1;Application;Informational;"Date: 23/10/2022 00:14:22.516; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:15:36;1;General;Informational;================================================================;
+2022-10-23;00:15:36;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:15:37;1;Application;Informational;"Date: 23/10/2022 00:15:37.879; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:16:24;1;General;Informational;================================================================;
+2022-10-23;00:16:24;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:16:25;1;Application;Informational;"Date: 23/10/2022 00:16:25.711; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:22:09;1;General;Informational;================================================================;
+2022-10-23;00:22:09;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:22:09;1;Application;Informational;"Date: 23/10/2022 00:22:09.101; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:22:13;1;Application;Informational;"Date: 23/10/2022 00:22:13.195; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Database backup was created successfuly. Filename: BackUP_YYYY10DD,dump"
+2022-10-23;00:23:30;1;General;Informational;================================================================;
+2022-10-23;00:23:30;1;General;Informational;============== LOGGER INITIALIZED FOR CabinetDataStore ============== ;
+2022-10-23;00:23:30;1;Application;Informational;"Date: 23/10/2022 00:23:30.909; WhereItCameFrom: PatientForm; Message: Load Patients form"
+2022-10-23;00:23:36;1;Application;Informational;"Date: 23/10/2022 00:23:36.137; WhereItCameFrom: archiveDatabaseToolStripMenuItem_Click; Message: Database backup was created successfuly. Filename: BackUP_20221023,dump"
