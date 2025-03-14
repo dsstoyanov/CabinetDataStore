@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using Logger;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.Entity;
+using System.Linq.Expressions;
 
 namespace CabinetDataStore.Business.Services
 {
@@ -30,7 +31,7 @@ namespace CabinetDataStore.Business.Services
             }
             catch (Exception ex)
             {
-                LoggerManager.Informational($"Critical at class::{this.GetType().Name}");
+                LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
                 LoggerManager.Critical(ex);
                 return null;
             }
@@ -38,11 +39,20 @@ namespace CabinetDataStore.Business.Services
 
         public List<ExaminationModel> GetExaminationsForToday()
         {
-            using (CabinetEntities context = new CabinetEntities())
+            try
             {
-                var Examinations = context.ExaminationsData.Where(x => x.ExaminationDate.Day == DateTime.Now.Day && x.ExaminationDate.Month == DateTime.Now.Month && x.ExaminationDate.Year == DateTime.Now.Year).ToList();
-
-                return Mapper.Map<List<ExaminationModel>>(Examinations);
+                using (CabinetEntities context = new CabinetEntities())
+                {
+                    var Examinations = context.ExaminationsData.Where(x => x.ExaminationDate.Day == DateTime.Now.Day && x.ExaminationDate.Month == DateTime.Now.Month && x.ExaminationDate.Year == DateTime.Now.Year).ToList();
+                    
+                    return Mapper.Map<List<ExaminationModel>>(Examinations);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
+                Logger.LoggerManager.Critical(ex);
+                return null;
             }
         }
 
@@ -72,7 +82,8 @@ namespace CabinetDataStore.Business.Services
                 }
                 catch (Exception ex)
                 {
-                    
+                    LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
+                    Logger.LoggerManager.Critical(ex);
                     return result;
                 }
             }
@@ -108,7 +119,8 @@ namespace CabinetDataStore.Business.Services
                 }
                 catch (Exception ex)
                 {
-
+                    LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
+                    Logger.LoggerManager.Critical(ex);
                     return result;
                 }
             }
@@ -127,6 +139,7 @@ namespace CabinetDataStore.Business.Services
             }
             catch (Exception ex)
             {
+                LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
                 Logger.LoggerManager.Critical(ex);
                 return 0;
             }
@@ -146,7 +159,7 @@ namespace CabinetDataStore.Business.Services
             }
             catch(Exception ex) 
             {
-                LoggerManager.Informational($"Critical at class::{this.GetType().Name}");
+                LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
                 LoggerManager.Critical(ex);
                 return null;
             }

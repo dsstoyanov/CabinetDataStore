@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
@@ -25,6 +26,7 @@ namespace CabinetDataStore.Main
         private readonly IExamination examinationService;
         private DataTable dt = new DataTable();
         private DataTable dtExamination = new DataTable();
+        public static bool useOldPrintVersion = false;
 
         public PatientForm(PatientModel model)
         {
@@ -56,6 +58,9 @@ namespace CabinetDataStore.Main
 
         public void PatientForm_Load(object sender, EventArgs e)
         {
+            lblVersion.Text = "Cabinet Data Store v2.3.0";
+            lblVersion.ForeColor = Color.Green;
+            използвайСтароПринтираеToolStripMenuItem.Checked = false;
             comboFilter.SelectedIndex = 0;
             dt.Columns.Clear();
             dtExamination.Columns.Clear();
@@ -123,12 +128,13 @@ namespace CabinetDataStore.Main
                 if (PatientData.Count == 1)
                 {
                     ShowPatientData(PatientData);
-                    Logger.LoggerManager.Informational($"Patient found:");
+                    Logger.LoggerManager.Informational($"Search result: {PatientData.Count} Patient found with ID: [{PatientData[0]?.PatientId}] {PatientData[0]?.PatientName} ", this.GetType().Name);
                 }
 
                 else if (PatientData.Count != 0 && PatientData.Count > 1)
                 {
                     ChoosePatient choose = new ChoosePatient(this, PatientData, patientService, examinationService);
+                    Logger.LoggerManager.Informational($"Search result: {PatientData.Count} Patient found - search name: {txtFilter.Text}", this.GetType().Name);
                     choose.ShowDialog();
                 }
             }
@@ -480,13 +486,13 @@ namespace CabinetDataStore.Main
         private void patientsCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var patientsCount = patientService.PatientsCount();
-            MessageBox.Show($"Пациенти: {patientsCount}", "Справка пациенти");
+            MessageBox.Show($"Пациенти: {patientsCount}", "Справка пациенти",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void examinationsCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var examinationsCount = examinationService.ExaminationsCount();
-            MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи");
+            MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
 
         private void refreshExamDate_Click(object sender, EventArgs e)
@@ -516,6 +522,31 @@ namespace CabinetDataStore.Main
             dgvDaily.Columns["Пациент ID"].Width = 1;
             this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
             dgvDaily.DataSource = dtExamination;
+        }
+
+        private void версияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Version: 2.3.0\nRevision: 29d9e11\nTech Stack: .NET Framework 4.7.2\n\nLogs:\n{Directory.GetCurrentDirectory() + "\\Logs\\"}", "Cabinet Data Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void контактToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Програмист: Деян Стоянов Стоянов\nТелефон: +359 877 66 0967", "Cabinet Data Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void използвайСтароПринтираеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            използвайСтароПринтираеToolStripMenuItem.CheckOnClick = true;
+
+            if (използвайСтароПринтираеToolStripMenuItem.CheckState == CheckState.Unchecked)
+            {
+                useOldPrintVersion = false;
+            }
+            else
+            {
+                useOldPrintVersion = true;
+            }
+
         }
     }
 }

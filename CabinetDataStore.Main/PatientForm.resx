@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="pickExam.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="refreshExamDate.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAjCFJREFUeF7tvQd4HNd1/v1fFFLNcom743yJ48ROcxI7cezEjnvcm7B90XuvBAiC
+        DAAACwwBP0AiyAAAjCFJREFUeF7tvQd4HNd1/v1fFFLNcom743yJ48ROcxI7cezEjnvcm7B90XuvBAiC
         vfdOUZTEKpJiVe+dFMWoS1ShZFnFLYljJ7EdO5asQvB733PL3JmdBQGJkkhq7vO8z8wOCALYnd97zrlt
         /l/Uoha1qEUtalGLWtSiFrWoRS1qUYta1KIWtahFLWpRi1rUoha1qEUtalGLWtSiFrWoRS1qUYta1KIW
         tahF7WW35q7+WGN7T6y+tStW19Ipqm/tjjW0dcfqca7/WdSiFrVTqfVPXxTrnjQz1t4/pai1Z1Jxc9dA
