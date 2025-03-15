@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CabinetDataStore.BusinessService")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Cabinet Data Store Middleware")]
+[assembly: AssemblyDescription("Prof. Kornovski Patients Software")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CabinetDataStore.BusinessService")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Stoyanov Soft")]
+[assembly: AssemblyProduct("Cabinet Data Store")]
+[assembly: AssemblyCopyright("Copyright © 2025")]
+[assembly: AssemblyTrademark("dsstoyanov")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
@@ -26,11 +26,12 @@ using System.Runtime.InteropServices;
 //
 //      Major Version
 //      Minor Version
-//      Build Number
-//      Revision
+//      Build Number - Number of days since January 1, 2000.
+//      Revision - Number of seconds since midnight, divided by 2.
 //
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("2.1.*")]
+//FileVersion format: yyyy.mm.dd.0
+[assembly: AssemblyFileVersion("2025.03.13.0")]
