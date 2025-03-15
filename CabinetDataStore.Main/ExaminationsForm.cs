@@ -2,10 +2,6 @@
 using CabinetDataStore.Business.Models;
 using CabinetDataStore.BusinessService.ExaminationModels;
 using CabinetDataStore.BusinessService.PatientModels;
-using DevExpress.Internal.WinApi.Windows.UI.Notifications;
-using DevExpress.Printing.ExportHelpers;
-using DevExpress.XtraEditors;
-using DevExpress.XtraPrinting.Native;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

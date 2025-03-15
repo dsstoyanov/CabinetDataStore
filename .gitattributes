@@ -1,0 +1,26 @@
+# Set the default behavior for text files to normalize line endings to LF
+* text=auto
+
+# Ensure C# files use LF
+*.cs text diff=csharp
+
+# Ensure Visual Studio solution files use CRLF
+*.sln text eol=crlf
+
+# Normalize JSON files
+*.json text
+
+# Treat shell scripts as text and normalize line endings
+*.sh text eol=lf
+
+# Ensure batch files use CRLF
+*.bat text eol=crlf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.exe binary
+*.dll binary

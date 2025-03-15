@@ -1,0 +1,101 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.app
+*.pdb
+*.cache
+*.mdb
+
+# VS Code settings
+.vscode/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results of Visual Studio
+*_i.c
+*_p.c
+*_h.h
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.pch
+*.ipch
+*.pdb
+*.tlog
+*.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish results
+*.publish.xml
+publish/
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+# Uncomment if you have a NuGet.Config and want to ignore packages in subfolders
+# **/packages/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# JetBrains Rider
+.idea/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# Database files
+*.mdf
+*.ldf
+*.ndf
+
+# Local test result files
+*.trx
+TestResults/
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# IIS Express
+.vsconfig
+/.vs/
