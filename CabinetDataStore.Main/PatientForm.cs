@@ -13,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Reflection;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace CabinetDataStore.Main
         private DataTable dt = new DataTable();
         private DataTable dtExamination = new DataTable();
         public static bool useOldPrintVersion = false;
+        // Get the executing assembly
+        public Assembly assembly = Assembly.GetExecutingAssembly();
 
         public PatientForm(PatientModel model)
         {
@@ -58,7 +61,7 @@ namespace CabinetDataStore.Main
 
         public void PatientForm_Load(object sender, EventArgs e)
         {
-            lblVersion.Text = "Cabinet Data Store v2.3.0";
+            lblVersion.Text = $"Cabinet Data Store v{assembly.GetName().Version}";
             lblVersion.ForeColor = Color.Green;
             използвайСтароПринтираеToolStripMenuItem.Checked = false;
             comboFilter.SelectedIndex = 0;
@@ -66,6 +69,7 @@ namespace CabinetDataStore.Main
             dtExamination.Columns.Clear();
             dtFilterDate.Visible = false;
             АutoCompleteInsert();
+            използвайСтароПринтираеToolStripMenuItem.CheckState = CheckState.Unchecked;
 
             dt.Columns.Add("ID", typeof(int));
             dt.Columns.Add("Име", typeof(string));
@@ -485,14 +489,12 @@ namespace CabinetDataStore.Main
 
         private void patientsCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var patientsCount = patientService.PatientsCount();
-            MessageBox.Show($"Пациенти: {patientsCount}", "Справка пациенти",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            
         }
 
         private void examinationsCountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var examinationsCount = examinationService.ExaminationsCount();
-            MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            
         }
 
         private void refreshExamDate_Click(object sender, EventArgs e)
@@ -526,7 +528,10 @@ namespace CabinetDataStore.Main
 
         private void версияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Version: 2.3.0\nRevision: 29d9e11\nTech Stack: .NET Framework 4.7.2\n\nLogs:\n{Directory.GetCurrentDirectory() + "\\Logs\\"}", "Cabinet Data Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Get Assembly Version
+            Version assemblyVersion = assembly.GetName().Version;
+            var fileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(assembly.Location).FileVersion;
+            MessageBox.Show($"Assembly version: {assemblyVersion}\nFile version: {fileVersionInfo}\nTech Stack: .NET Framework 4.7.2\n\n", "Cabinet Data Store", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void контактToolStripMenuItem_Click(object sender, EventArgs e)
@@ -536,17 +541,31 @@ namespace CabinetDataStore.Main
 
         private void използвайСтароПринтираеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            използвайСтароПринтираеToolStripMenuItem.CheckOnClick = true;
-
+            // Set menu strip item to checked and unchecked
             if (използвайСтароПринтираеToolStripMenuItem.CheckState == CheckState.Unchecked)
-            {
-                useOldPrintVersion = false;
-            }
+                използвайСтароПринтираеToolStripMenuItem.Checked = true;
+                
             else
-            {
-                useOldPrintVersion = true;
-            }
+                използвайСтароПринтираеToolStripMenuItem.Checked = false;
 
+            // Do the work regarding if the menu strip is checked or not
+            if (използвайСтароПринтираеToolStripMenuItem.Checked)
+                useOldPrintVersion = true;
+            else
+                useOldPrintVersion = false;
+
+        }
+
+        private void бройПациентиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var patientsCount = patientService.PatientsCount();
+            MessageBox.Show($"Пациенти: {patientsCount}", "Справка пациенти", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void бройПрегледиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var examinationsCount = examinationService.ExaminationsCount();
+            MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
