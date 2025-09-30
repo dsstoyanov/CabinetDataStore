@@ -567,5 +567,11 @@ namespace CabinetDataStore.Main
             var examinationsCount = examinationService.ExaminationsCount();
             MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void sMSИзвестияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SMSReportForm smsReportForm = new SMSReportForm();
+            smsReportForm.ShowDialog();
+        }
     }
 }

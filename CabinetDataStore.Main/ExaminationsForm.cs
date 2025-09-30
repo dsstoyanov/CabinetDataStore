@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Reflection.Emit;
@@ -348,7 +349,7 @@ namespace CabinetDataStore.Main
             Font footer = new Font(FontFamily.GenericSansSerif, 8, FontStyle.Bold);//font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
             SolidBrush brush = new SolidBrush(Color.Navy);
             SolidBrush footerBrush = new SolidBrush(Color.Navy);
-            SolidBrush defaultBrush = new SolidBrush(Color.Gray);
+            SolidBrush defaultBrush = new SolidBrush(Color.Black);
             Point loc = new Point(0, 0);
 
             g.DrawImage(CabinetDataStore.Main.Properties.Resources.full_header_2025, loc);
@@ -366,15 +367,18 @@ namespace CabinetDataStore.Main
             }
 
             // Draw the header fields
-            g.DrawString(label1.Text + ":", font, brush, new Rectangle(30, 250, 100, 30));
-            //g.DrawRectangle(Pens.Black, 90, 247, 170, 20);
-            g.FillRectangle(defaultBrush, 100, 266, 150, 1);
-            g.DrawString(txtExamDate.Text, datas, brush, new Rectangle(100, 249, 170, 20));
-
-            g.DrawString(label2.Text + ":", font, brush, new Rectangle(325, 250, 100, 30));
+          
+            // имена
+            g.DrawString(label2.Text + ":", font, brush, new Rectangle(30, 250, 100, 30));
             //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
-            g.FillRectangle(defaultBrush, 395, 266, 375, 1);
-            g.DrawString(printName, datas, brush, new Rectangle(395, 249, 370, 20));
+            g.FillRectangle(brush, 95, 245, 375, 20);
+            g.DrawString(printName, datas, new SolidBrush(Color.White), new Rectangle(100, 249, 370, 20));
+
+            // телефон
+            g.DrawString("Телефон:", font, brush, new Rectangle(30, 275, 100, 30));
+            //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
+            g.FillRectangle(brush, 95, 270, 185, 20);
+            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), datas, new SolidBrush(Color.White), new Rectangle(100, 274, 170, 20));
 
             // Анамнеза Section
             g.DrawString("Анамнеза", sectionName, brush, new Rectangle(30, 300, 230, 40));
@@ -457,19 +461,22 @@ namespace CabinetDataStore.Main
 
             // Терапия Section
             g.DrawString("Терапия", sectionName, brush, new Rectangle(30, 920, 230, 40));
-            g.FillRectangle(brush, 30, 940, 350, 3);
+            g.FillRectangle(brush, 30, 940, 370, 3);
             //g.DrawRectangle(Pens.Black, 25, 950, 350, 100);
-            g.DrawString(txtTherapy.Text, datas, defaultBrush, new Rectangle(30, 952, 350, 100));
+            g.DrawString(txtTherapy.Text, datas, defaultBrush, new Rectangle(30, 952, 370, 120));
 
             // Препоръки Section
             g.DrawString("Препоръки", sectionName, brush, new Rectangle(420, 920, 230, 40));
-            g.FillRectangle(brush, 420, 940, 350, 3);
+            g.FillRectangle(brush, 420, 940, 370, 3);
             //g.DrawRectangle(Pens.Black, 415, 950, 350, 100);
-            g.DrawString(txtRecommendations.Text, datas, defaultBrush, new Rectangle(420, 952, 350, 100));
+            g.DrawString(txtRecommendations.Text, datas, defaultBrush, new Rectangle(420, 952, 370, 120));
 
-
+            // дата на прегледа
+            g.DrawString(FormatExaminationDate(Examination.ExaminationDate), footer, footerBrush, new Rectangle(40, 1080, 550, 40));
 
             g.DrawString($"Проф. Явор Корновски | © {DateTime.Now.Year.ToString()}", footer, footerBrush, new Rectangle(600, 1080, 550, 40));
+            
+            
 
 
         }
@@ -1004,6 +1011,35 @@ namespace CabinetDataStore.Main
             };
         }
 
+        /// <summary>
+        /// Format phone number easy-to-read
+        /// </summary>
+        /// <param name="phoneNumber"></param>
+        /// <returns></returns>
+        private string FormatPhoneNumber(string phoneNumber)
+        {
+            if (phoneNumber.Length == 10)
+            {
+                phoneNumber = $"+359  {phoneNumber.Substring(1, 2)} {phoneNumber.Substring(3, 3)} {phoneNumber.Substring(6, 4)}";
+                return phoneNumber;
+            }
+            else
+            {
+                return phoneNumber;
+            }
+        }
 
+        /// <summary>
+        /// Format date to be printed on the list in BG variant
+        /// </summary>
+        /// <param name="examinationDate"></param>
+        /// <returns></returns>
+        private string FormatExaminationDate(DateTime examinationDate)
+        {
+            CultureInfo bg = new CultureInfo("bg-BG");
+
+            string examDateFormatted = Examination.ExaminationDate.ToString("d MMMM yyyy'г' HH:mm:ss", bg);
+            return examDateFormatted;
+        }
     }
 }

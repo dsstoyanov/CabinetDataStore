@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefusal = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -70,6 +70,12 @@
             this.възрастToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.групиранеПоГодиниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.поРажданияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.бройНовиПациентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.денToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.седмицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.месецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.годинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.прегледиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.бройПрегледиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.статистикаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,21 +85,16 @@
             this.заГодинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.направиАрхивНаБазатаДанниToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.директноПремахванеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.наПациентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.наПрегледToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.използвайСтароПринтираеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.версияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.контактToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.бройНовиПациентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.денToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.седмицаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.месецToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.годинаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.директноПремахванеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.наПациентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.наПрегледToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sMSИзвестияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpPatientData.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -376,28 +377,28 @@
             this.dgvDaily.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDaily.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDaily.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDaily.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDaily.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDaily.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDaily.EnableHeadersVisualStyles = false;
             this.dgvDaily.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvDaily.Location = new System.Drawing.Point(15, 49);
             this.dgvDaily.Name = "dgvDaily";
             this.dgvDaily.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDaily.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDaily.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDaily.RowHeadersVisible = false;
             this.dgvDaily.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.dgvDaily.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -431,14 +432,14 @@
             this.dgvAll.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAll.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAll.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAll.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAll.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAll.EnableHeadersVisualStyles = false;
             this.dgvAll.GridColor = System.Drawing.SystemColors.ControlLightLight;
@@ -537,11 +538,53 @@
             this.поРажданияToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
             this.поРажданияToolStripMenuItem.Text = "Групиране по раждания";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
+            // 
+            // бройНовиПациентиToolStripMenuItem
+            // 
+            this.бройНовиПациентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.денToolStripMenuItem,
+            this.седмицаToolStripMenuItem,
+            this.месецToolStripMenuItem,
+            this.годинаToolStripMenuItem});
+            this.бройНовиПациентиToolStripMenuItem.Enabled = false;
+            this.бройНовиПациентиToolStripMenuItem.Name = "бройНовиПациентиToolStripMenuItem";
+            this.бройНовиПациентиToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
+            this.бройНовиПациентиToolStripMenuItem.Text = "Брой нови пациенти";
+            // 
+            // денToolStripMenuItem
+            // 
+            this.денToolStripMenuItem.Name = "денToolStripMenuItem";
+            this.денToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.денToolStripMenuItem.Text = "Ден";
+            // 
+            // седмицаToolStripMenuItem
+            // 
+            this.седмицаToolStripMenuItem.Name = "седмицаToolStripMenuItem";
+            this.седмицаToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.седмицаToolStripMenuItem.Text = "Седмица";
+            // 
+            // месецToolStripMenuItem
+            // 
+            this.месецToolStripMenuItem.Name = "месецToolStripMenuItem";
+            this.месецToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.месецToolStripMenuItem.Text = "Месец";
+            // 
+            // годинаToolStripMenuItem
+            // 
+            this.годинаToolStripMenuItem.Name = "годинаToolStripMenuItem";
+            this.годинаToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.годинаToolStripMenuItem.Text = "Година";
+            // 
             // прегледиToolStripMenuItem
             // 
             this.прегледиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.бройПрегледиToolStripMenuItem,
-            this.статистикаToolStripMenuItem});
+            this.статистикаToolStripMenuItem,
+            this.sMSИзвестияToolStripMenuItem});
             this.прегледиToolStripMenuItem.Name = "прегледиToolStripMenuItem";
             this.прегледиToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.прегледиToolStripMenuItem.Text = "Прегледи";
@@ -604,9 +647,32 @@
             // направиАрхивНаБазатаДанниToolStripMenuItem
             // 
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Name = "направиАрхивНаБазатаДанниToolStripMenuItem";
-            this.направиАрхивНаБазатаДанниToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.направиАрхивНаБазатаДанниToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Text = "Database архив";
             this.направиАрхивНаБазатаДанниToolStripMenuItem.Click += new System.EventHandler(this.archiveDatabaseToolStripMenuItem_Click);
+            // 
+            // директноПремахванеToolStripMenuItem
+            // 
+            this.директноПремахванеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.наПациентToolStripMenuItem,
+            this.наПрегледToolStripMenuItem});
+            this.директноПремахванеToolStripMenuItem.Name = "директноПремахванеToolStripMenuItem";
+            this.директноПремахванеToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.директноПремахванеToolStripMenuItem.Text = "Директно премахване";
+            // 
+            // наПациентToolStripMenuItem
+            // 
+            this.наПациентToolStripMenuItem.Enabled = false;
+            this.наПациентToolStripMenuItem.Name = "наПациентToolStripMenuItem";
+            this.наПациентToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.наПациентToolStripMenuItem.Text = "На пациент";
+            // 
+            // наПрегледToolStripMenuItem
+            // 
+            this.наПрегледToolStripMenuItem.Enabled = false;
+            this.наПрегледToolStripMenuItem.Name = "наПрегледToolStripMenuItem";
+            this.наПрегледToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.наПрегледToolStripMenuItem.Text = "На преглед";
             // 
             // settingsToolStripMenuItem
             // 
@@ -637,14 +703,14 @@
             // версияToolStripMenuItem
             // 
             this.версияToolStripMenuItem.Name = "версияToolStripMenuItem";
-            this.версияToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.версияToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.версияToolStripMenuItem.Text = "Версия";
             this.версияToolStripMenuItem.Click += new System.EventHandler(this.версияToolStripMenuItem_Click);
             // 
             // контактToolStripMenuItem
             // 
             this.контактToolStripMenuItem.Name = "контактToolStripMenuItem";
-            this.контактToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.контактToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.контактToolStripMenuItem.Text = "Контакти";
             this.контактToolStripMenuItem.Click += new System.EventHandler(this.контактToolStripMenuItem_Click);
             // 
@@ -656,69 +722,12 @@
             this.lblVersion.Size = new System.Drawing.Size(0, 13);
             this.lblVersion.TabIndex = 38;
             // 
-            // toolStripSeparator2
+            // sMSИзвестияToolStripMenuItem
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(204, 6);
-            // 
-            // бройНовиПациентиToolStripMenuItem
-            // 
-            this.бройНовиПациентиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.денToolStripMenuItem,
-            this.седмицаToolStripMenuItem,
-            this.месецToolStripMenuItem,
-            this.годинаToolStripMenuItem});
-            this.бройНовиПациентиToolStripMenuItem.Enabled = false;
-            this.бройНовиПациентиToolStripMenuItem.Name = "бройНовиПациентиToolStripMenuItem";
-            this.бройНовиПациентиToolStripMenuItem.Size = new System.Drawing.Size(207, 22);
-            this.бройНовиПациентиToolStripMenuItem.Text = "Брой нови пациенти";
-            // 
-            // денToolStripMenuItem
-            // 
-            this.денToolStripMenuItem.Name = "денToolStripMenuItem";
-            this.денToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.денToolStripMenuItem.Text = "Ден";
-            // 
-            // седмицаToolStripMenuItem
-            // 
-            this.седмицаToolStripMenuItem.Name = "седмицаToolStripMenuItem";
-            this.седмицаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.седмицаToolStripMenuItem.Text = "Седмица";
-            // 
-            // месецToolStripMenuItem
-            // 
-            this.месецToolStripMenuItem.Name = "месецToolStripMenuItem";
-            this.месецToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.месецToolStripMenuItem.Text = "Месец";
-            // 
-            // годинаToolStripMenuItem
-            // 
-            this.годинаToolStripMenuItem.Name = "годинаToolStripMenuItem";
-            this.годинаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.годинаToolStripMenuItem.Text = "Година";
-            // 
-            // директноПремахванеToolStripMenuItem
-            // 
-            this.директноПремахванеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.наПациентToolStripMenuItem,
-            this.наПрегледToolStripMenuItem});
-            this.директноПремахванеToolStripMenuItem.Name = "директноПремахванеToolStripMenuItem";
-            this.директноПремахванеToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.директноПремахванеToolStripMenuItem.Text = "Директно премахване";
-            // 
-            // наПациентToolStripMenuItem
-            // 
-            this.наПациентToolStripMenuItem.Enabled = false;
-            this.наПациентToolStripMenuItem.Name = "наПациентToolStripMenuItem";
-            this.наПациентToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.наПациентToolStripMenuItem.Text = "На пациент";
-            // 
-            // наПрегледToolStripMenuItem
-            // 
-            this.наПрегледToolStripMenuItem.Enabled = false;
-            this.наПрегледToolStripMenuItem.Name = "наПрегледToolStripMenuItem";
-            this.наПрегледToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.наПрегледToolStripMenuItem.Text = "На преглед";
+            this.sMSИзвестияToolStripMenuItem.Name = "sMSИзвестияToolStripMenuItem";
+            this.sMSИзвестияToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.sMSИзвестияToolStripMenuItem.Text = "SMS Известия";
+            this.sMSИзвестияToolStripMenuItem.Click += new System.EventHandler(this.sMSИзвестияToolStripMenuItem_Click);
             // 
             // PatientForm
             // 
@@ -821,6 +830,7 @@
         private System.Windows.Forms.ToolStripMenuItem директноПремахванеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem наПациентToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem наПрегледToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sMSИзвестияToolStripMenuItem;
     }
 }
 
