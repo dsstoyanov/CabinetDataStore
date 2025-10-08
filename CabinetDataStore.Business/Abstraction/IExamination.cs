@@ -22,5 +22,7 @@ namespace CabinetDataStore.Business.Abstraction
         int ExaminationsCount();
 
         List<ExaminationModel> GetExaminationsByDate(DateTime date);
+
+        List<ExaminationModel> GetExaminationsByTimeRange(DateTime dateFrom, DateTime dateTo);
     }
 }

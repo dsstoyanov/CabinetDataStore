@@ -570,7 +570,7 @@ namespace CabinetDataStore.Main
 
         private void sMSИзвестияToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SMSReportForm smsReportForm = new SMSReportForm();
+            SMSReportForm smsReportForm = new SMSReportForm(patientService, examinationService);
             smsReportForm.ShowDialog();
         }
     }

@@ -31,8 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.smsReportView = new System.Windows.Forms.DataGridView();
-            this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.dtFrom = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtTo = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.smsReportView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +63,7 @@
             this.smsReportView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.smsReportView.EnableHeadersVisualStyles = false;
             this.smsReportView.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.smsReportView.Location = new System.Drawing.Point(34, 129);
+            this.smsReportView.Location = new System.Drawing.Point(34, 121);
             this.smsReportView.Name = "smsReportView";
             this.smsReportView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -77,30 +82,86 @@
             this.smsReportView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.SteelBlue;
             this.smsReportView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.smsReportView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.smsReportView.Size = new System.Drawing.Size(732, 309);
+            this.smsReportView.Size = new System.Drawing.Size(732, 317);
             this.smsReportView.TabIndex = 12;
             // 
-            // dtBirthDate
+            // dtFrom
             // 
-            this.dtBirthDate.Enabled = false;
-            this.dtBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtBirthDate.Location = new System.Drawing.Point(188, 19);
-            this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(153, 20);
-            this.dtBirthDate.TabIndex = 30;
-            this.dtBirthDate.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtFrom.Location = new System.Drawing.Point(43, 51);
+            this.dtFrom.Name = "dtFrom";
+            this.dtFrom.Size = new System.Drawing.Size(96, 20);
+            this.dtFrom.TabIndex = 30;
+            this.dtFrom.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Controls.Add(this.dtBirthDate);
+            this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dtTo);
+            this.groupBox1.Controls.Add(this.dtFrom);
             this.groupBox1.Location = new System.Drawing.Point(34, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(455, 100);
+            this.groupBox1.Size = new System.Drawing.Size(468, 103);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ПАРАМЕТРИ";
+            this.groupBox1.Text = "Филтри";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(387, 74);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 32;
+            this.btnSearch.Text = "Приложи";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 13);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "ДО";
+            // 
+            // dtTo
+            // 
+            this.dtTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dtTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtTo.Location = new System.Drawing.Point(43, 77);
+            this.dtTo.Name = "dtTo";
+            this.dtTo.Size = new System.Drawing.Size(96, 20);
+            this.dtTo.TabIndex = 32;
+            this.dtTo.Value = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Преди година",
+            "Преди месец",
+            "Преди седмица",
+            "Ръчно търсене"});
+            this.comboBox1.Location = new System.Drawing.Point(8, 19);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(227, 21);
+            this.comboBox1.TabIndex = 34;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.TabIndex = 35;
+            this.label3.Text = "ОТ";
             // 
             // SMSReportForm
             // 
@@ -110,9 +171,12 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.smsReportView);
             this.Name = "SMSReportForm";
-            this.Text = "SMSReportForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Справка SMS нотификации";
+            this.Load += new System.EventHandler(this.SMSReportForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.smsReportView)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -120,7 +184,12 @@
         #endregion
 
         private System.Windows.Forms.DataGridView smsReportView;
-        private System.Windows.Forms.DateTimePicker dtBirthDate;
+        private System.Windows.Forms.DateTimePicker dtFrom;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtTo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -635,7 +635,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ExaminationsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Examinations";
+            this.Text = "Преглед";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
