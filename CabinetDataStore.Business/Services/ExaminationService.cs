@@ -171,7 +171,10 @@ namespace CabinetDataStore.Business.Services
             {
                 using (CabinetEntities context = new CabinetEntities())
                 {
-                    var examinationsByTimeRange = context.ExaminationsData.Where(x => DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom && DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo).ToList();
+                    var examinationsByTimeRange = context.ExaminationsData
+                        .Where(x => DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom && DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo)
+                        .Select(x=> new ExaminationModel { ExaminationID = x.ExaminationId, PatientId = x.PatientId, ExaminationDate = x.ExaminationDate, Diagnosis = x.Diagnosis})
+                        .ToList();
 
                     return Mapper.Map<List<ExaminationModel>>(examinationsByTimeRange);
                 }

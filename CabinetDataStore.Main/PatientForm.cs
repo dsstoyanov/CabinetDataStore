@@ -370,17 +370,6 @@ namespace CabinetDataStore.Main
             }
         }
 
-        private void refreshTimer_Tick(object sender, EventArgs e)
-        {
-            //refreshTimer.Interval = 10000;
-            //RefreshDailyExaminations();
-            //dgvDaily.Columns["ID"].Width = 80;
-            //dgvDaily.Columns["Пациент"].Width = 200;
-            //dgvDaily.Columns["Дата на прегледа"].Width = 200;
-            //dgvDaily.Columns["Пациент ID"].Width = 1;
-            //this.dgvDaily.Sort(this.dgvDaily.Columns["Дата на прегледа"], ListSortDirection.Descending);
-            //АutoCompleteInsert();
-        }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -568,7 +557,7 @@ namespace CabinetDataStore.Main
             MessageBox.Show($"Прегледи: {examinationsCount}", "Справка прегледи", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void sMSИзвестияToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sMSИзвестияToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             SMSReportForm smsReportForm = new SMSReportForm(patientService, examinationService);
             smsReportForm.ShowDialog();

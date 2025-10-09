@@ -350,6 +350,7 @@ namespace CabinetDataStore.Main
             SolidBrush brush = new SolidBrush(Color.Navy);
             SolidBrush footerBrush = new SolidBrush(Color.Navy);
             SolidBrush defaultBrush = new SolidBrush(Color.Black);
+            
             Point loc = new Point(0, 0);
 
             g.DrawImage(CabinetDataStore.Main.Properties.Resources.full_header_2025, loc);
@@ -371,14 +372,14 @@ namespace CabinetDataStore.Main
             // имена
             g.DrawString(label2.Text + ":", font, brush, new Rectangle(30, 250, 100, 30));
             //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
-            g.FillRectangle(brush, 95, 245, 375, 20);
-            g.DrawString(printName, datas, new SolidBrush(Color.White), new Rectangle(100, 249, 370, 20));
+            //g.FillRectangle(brush, 95, 245, 375, 20);
+            g.DrawString(printName, new Font("Arial", 12, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 249, 370, 20));
 
             // телефон
             g.DrawString("Телефон:", font, brush, new Rectangle(30, 275, 100, 30));
             //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
-            g.FillRectangle(brush, 95, 270, 185, 20);
-            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), datas, new SolidBrush(Color.White), new Rectangle(100, 274, 170, 20));
+            //g.FillRectangle(brush, 95, 270, 185, 20);
+            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 274, 170, 20));
 
             // Анамнеза Section
             g.DrawString("Анамнеза", sectionName, brush, new Rectangle(30, 300, 230, 40));
