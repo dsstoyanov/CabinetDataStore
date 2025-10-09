@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabinetDataStore.Main", "CabinetDataStore.Main\CabinetDataStore.Main.csproj", "{5C790D29-57C6-41EA-AB4A-37933E15E7D6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabinetDataStore.Business", "CabinetDataStore.BusinessService\CabinetDataStore.Business.csproj", "{C83DFBE9-DF47-4C71-A192-8F0DB7C0AEDE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabinetDataStore.BusinessService", "CabinetDataStore.Business\CabinetDataStore.BusinessService.csproj", "{7FFDC463-04A9-48D1-969C-996ED48092B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{C5A8AB6F-6A78-43A9-8196-331BC3F215A4}"
+	ProjectSection(SolutionItems) = preProject
+		Libs\LoggerManager.dll = Libs\LoggerManager.dll
+		Libs\Utilities.dll = Libs\Utilities.dll
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

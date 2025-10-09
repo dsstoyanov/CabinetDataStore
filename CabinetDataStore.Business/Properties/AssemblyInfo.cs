@@ -34,4 +34,4 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("2.1.*")]
 //FileVersion format: yyyy.mm.dd.0
-[assembly: AssemblyFileVersion("2025.03.13.0")]
+[assembly: AssemblyFileVersion("2025.10.09.0")]

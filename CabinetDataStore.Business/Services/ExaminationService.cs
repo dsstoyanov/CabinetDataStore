@@ -164,5 +164,27 @@ namespace CabinetDataStore.Business.Services
                 return null;
             }
         }
+
+        public List<ExaminationModel> GetExaminationsByTimeRange(DateTime dateFrom, DateTime dateTo)
+        {
+            try
+            {
+                using (CabinetEntities context = new CabinetEntities())
+                {
+                    var examinationsByTimeRange = context.ExaminationsData
+                        .Where(x => DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom && DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo)
+                        .Select(x=> new ExaminationModel { ExaminationID = x.ExaminationId, PatientId = x.PatientId, ExaminationDate = x.ExaminationDate, Diagnosis = x.Diagnosis})
+                        .ToList();
+
+                    return Mapper.Map<List<ExaminationModel>>(examinationsByTimeRange);
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggerManager.Informational($"Critical at namespace::{this.GetType().FullName}");
+                LoggerManager.Critical(ex);
+                return null;
+            }
+        }
     }
 }
