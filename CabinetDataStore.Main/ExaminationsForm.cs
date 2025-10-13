@@ -368,18 +368,22 @@ namespace CabinetDataStore.Main
             }
 
             // Draw the header fields
-          
+
+            // дата на прегледа
+            g.DrawString("Дата/час:", font, brush, new Rectangle(30, 250, 100, 30));
+            g.DrawString(FormatExaminationDate(Examination.ExaminationDate), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(95, 250, 550, 40));
+
             // имена
-            g.DrawString(label2.Text + ":", font, brush, new Rectangle(30, 250, 100, 30));
+            g.DrawString(label2.Text + ":", font, brush, new Rectangle(310, 250, 100, 30));
             //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
             //g.FillRectangle(brush, 95, 245, 375, 20);
-            g.DrawString(printName, new Font("Arial", 12, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 249, 370, 20));
+            g.DrawString(printName, new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(380, 249, 370, 20));
 
             // телефон
-            g.DrawString("Телефон:", font, brush, new Rectangle(30, 275, 100, 30));
+            g.DrawString("Телефон:", font, brush, new Rectangle(310, 275, 100, 30));
             //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
             //g.FillRectangle(brush, 95, 270, 185, 20);
-            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 274, 170, 20));
+            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(380, 274, 170, 20));
 
             // Анамнеза Section
             g.DrawString("Анамнеза", sectionName, brush, new Rectangle(30, 300, 230, 40));
@@ -472,8 +476,7 @@ namespace CabinetDataStore.Main
             //g.DrawRectangle(Pens.Black, 415, 950, 350, 100);
             g.DrawString(txtRecommendations.Text, datas, defaultBrush, new Rectangle(420, 952, 370, 120));
 
-            // дата на прегледа
-            g.DrawString(FormatExaminationDate(Examination.ExaminationDate), footer, footerBrush, new Rectangle(40, 1080, 550, 40));
+            
 
             g.DrawString($"Проф. Явор Корновски | © {DateTime.Now.Year.ToString()}", footer, footerBrush, new Rectangle(600, 1080, 550, 40));
             
@@ -1039,7 +1042,7 @@ namespace CabinetDataStore.Main
         {
             CultureInfo bg = new CultureInfo("bg-BG");
 
-            string examDateFormatted = Examination.ExaminationDate.ToString("d MMMM yyyy'г' HH:mm:ss", bg);
+            string examDateFormatted = Examination.ExaminationDate.ToString("d MMMM yyyy HH:mm:ss", bg);
             return examDateFormatted;
         }
     }
