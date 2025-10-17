@@ -1,0 +1,41 @@
+
+CREATE TABLE IF NOT EXISTS public."Notifications"
+(
+	"NotificationId" serial8,
+    "ExaminationId" bigint NOT NULL,
+    "PatientId" bigint NOT NULL,
+    "ExaminationDate" timestamp without time zone NOT NULL,
+	"NotificationDate" timestamp without time zone NOT NULL,
+	"isNotified" bool NOT NULL,
+	
+   CONSTRAINT "PK_public.Notifications" PRIMARY KEY ("NotificationId"),
+    CONSTRAINT "FK_public.Notifications_public.ExaminationsData_ExaminationId" FOREIGN KEY ("ExaminationId")
+        REFERENCES public."ExaminationsData" ("ExaminationId") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE,
+		
+    CONSTRAINT "FK_public.Notifications_public.PatientsData_PatientId" FOREIGN KEY ("PatientId")
+        REFERENCES public."PatientsData" ("PatientId") MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Notifications"
+    OWNER to postgres;
+-- Index: ExaminationsData_IX_PatientId
+
+-- DROP INDEX IF EXISTS public."ExaminationsData_IX_PatientId";
+
+CREATE INDEX IF NOT EXISTS "Notifications_IX_PatientId"
+    ON public."Notifications" USING btree
+    ("PatientId" ASC NULLS LAST)
+    WITH (fillfactor=100, deduplicate_items=True)
+    TABLESPACE pg_default;
+
+CREATE INDEX IF NOT EXISTS "Notifications_IX_ExaminationId"
+    ON public."Notifications" USING btree
+    ("PatientId" ASC NULLS LAST)
+    WITH (fillfactor=100, deduplicate_items=True)
+    TABLESPACE pg_default;

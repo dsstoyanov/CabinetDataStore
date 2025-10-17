@@ -15,13 +15,15 @@ namespace CabinetDataStore.Business.Services
 {
     public class PatientService : IPatient
     {
-        public List<PatientModel> GetAllPatients()
+        public string[] GetAllPatients()
         {
             using (CabinetEntities context = new CabinetEntities())
             {
-                var Patients = context.PatientsData.ToList();
-
-                return Mapper.Map<List<PatientModel>>(Patients);
+                return context.PatientsData
+                    .AsNoTracking()
+                    .Select(p => p.PatientName)
+                    .ToArray();
+                
             }
 
         }
@@ -34,17 +36,17 @@ namespace CabinetDataStore.Business.Services
                 switch (srchType)
                 {
                     case SearchTypes.Name:
-                        Patient = context.PatientsData.Where(x => x.PatientName.ToLower() == (string)value.ToString().ToLower()).ToList();
+                        Patient = context.PatientsData.AsNoTracking().Where(x => x.PatientName.ToLower() == (string)value.ToString().ToLower()).ToList();
                         break;
 
                     case SearchTypes.PhoneNumber:
-                        Patient = context.PatientsData.Where(x => x.PhoneNumber == (string)value).ToList();
+                        Patient = context.PatientsData.AsNoTracking().Where(x => x.PhoneNumber == (string)value).ToList();
                         break;
 
                     case SearchTypes.DateOfBirth:
                         var birthdate = value.ToString();
                         var casted = DateTime.Parse(birthdate);
-                        Patient = context.PatientsData.Where(x => x.BirthDay == casted).ToList();
+                        Patient = context.PatientsData.AsNoTracking().Where(x => x.BirthDay == casted).ToList();
                         break;
 
                     default: Patient = null;

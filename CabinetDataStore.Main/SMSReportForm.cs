@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -21,8 +22,7 @@ namespace CabinetDataStore.Main
     {
         private readonly IPatient patientService;
         private readonly IExamination examinationService;
-        private readonly PatientModel patientModel;
-        private readonly ExaminationModel examinationModel;
+        private readonly INotification notificationService;
         private DataTable smsReportDataTable = new DataTable();
 
         private static readonly HttpClient httpClient = new HttpClient();
@@ -36,22 +36,29 @@ namespace CabinetDataStore.Main
             InitializeComponent();
         }
 
-        public SMSReportForm(IPatient patientService, IExamination examinationService)
+        public SMSReportForm(IPatient patientService, IExamination examinationService, INotification notificationService)
         {
             InitializeComponent();
             this.patientService = patientService;
             this.examinationService = examinationService;
-
-            //smsReportDataTable.Columns.Add("Дата на преглед", typeof(string));
-            //smsReportDataTable.Columns.Add("Пациент", typeof(string));
-            //smsReportDataTable.Columns.Add("Телефон", typeof(string));
-            //smsReportDataTable.Columns.Add("Диагноза", typeof(string));
+            this.notificationService = notificationService;
 
             this.Focus();
         }
 
         private void SMSReportForm_Load(object sender, EventArgs e)
         {
+            smsReportView.ReadOnly = false;
+            smsReportView.Columns[0].ReadOnly = true;
+            smsReportView.Columns[1].ReadOnly = true;
+            smsReportView.Columns[2].ReadOnly = true;
+            smsReportView.Columns[3].ReadOnly = true;
+            smsReportView.Columns[4].ReadOnly = false;
+            smsReportView.Columns[0].Resizable = DataGridViewTriState.False;
+            smsReportView.Columns[1].Resizable = DataGridViewTriState.False;
+            smsReportView.Columns[2].Resizable = DataGridViewTriState.False;
+            smsReportView.Columns[3].Resizable = DataGridViewTriState.False;
+            smsReportView.Columns[4].Resizable = DataGridViewTriState.False;
             dtFrom.Enabled = false;
             dtTo.Enabled = false;
             label2.Visible = false;
@@ -62,32 +69,47 @@ namespace CabinetDataStore.Main
             dtTo.Value = new DateTime(DateTime.Now.Year - 1, DateTime.Now.Month + 1, DateTime.Now.Day);
 
             LoadExaminationsByDateDescending(dtFrom.Value, dtTo.Value);
+            
         }
 
         private void LoadExaminationsByDateDescending(DateTime dtFrom, DateTime dtTo)
         {
-            smsReportDataTable.Clear();
-            List<ExaminationModel> examinations = (examinationService.GetExaminationsByTimeRange(dtFrom, dtTo) ?? new List<ExaminationModel>())
+            // Get and order the data
+            var examinations = (examinationService.GetExaminationsByTimeRange(dtFrom, dtTo) ?? new List<ExaminationModel>())
                 .OrderByDescending(x => x.ExaminationDate)
                 .ToList();
 
-            if (examinations != null && examinations.Count >= 1)
+            // Populate DataGridView
+            if (examinations.Count > 0)
             {
-                
-                foreach (var examination in examinations)
+                foreach (var exam in examinations)
                 {
-                    var patient = patientService.GetPatientById(examination.PatientId);
-                    smsReportView.Rows.Add(new object[] { examination.ExaminationDate.ToString("dd/MM/yyyy HH:mm:ss"), patient.PatientName, patient.PhoneNumber, examination.Diagnosis, false });
-                    
+                    var notif = exam.Notifications?.FirstOrDefault(); // cache once to avoid double lookup
+
+                    smsReportView.Rows.Add(new object[]
+                    {
+                        notif?.NotificationId.ToString() ?? "",
+                        DateTime.Parse(exam.ExaminationDate.ToString(),CultureInfo.CurrentCulture),
+                        exam.Patient?.PatientName ?? "",
+                        exam.Patient?.PhoneNumber ?? "",
+                        notif?.isNotified ?? false,
+                        exam.Patient?.PatientId,
+                        exam.ExaminationID
+                    });
                 }
             }
-            if(smsReportView.Rows.Count > 0)
+
+            if (smsReportView.Rows.Count > 0)
             {
                 label1.Visible = true;
-                label1.Text= $"Общо: {smsReportView.Rows.Count} резултата";
+                if (smsReportView.Rows.Count == 1)
+                    label1.Text = $"Общо: {smsReportView.Rows.Count} резултат";
+                else if (smsReportView.Rows.Count > 1)
+                    label1.Text = $"Общо: {smsReportView.Rows.Count} резултата";
+                else
+                    label1.Visible = false;
                 label1.ForeColor = Color.Green;
             }
-            //smsReportView.DataSource = smsReportDataTable;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -192,6 +214,53 @@ namespace CabinetDataStore.Main
             else
             {
                 MessageBox.Show("Моля изберете валиден филтър!","Грешка",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
+        private void smsReportView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == smsReportView.Columns["columnChk"]?.Index && e.RowIndex >= 0)
+            {
+                smsReportView.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void smsReportView_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == smsReportView.Columns["columnChk"]?.Index && e.RowIndex >= 0)
+            {
+                // if we can parse the notification id from datagridview => operation UPDATE
+                if (long.TryParse(smsReportView.Rows[e.RowIndex].Cells["NotificationId"].Value.ToString(), out long notificationId))
+                {
+                    bool newValue = Convert.ToBoolean(smsReportView.Rows[e.RowIndex].Cells["columnChk"].Value);
+
+                    //Update database here
+                    bool updateResult = notificationService.UpdateNotification(notificationId, newValue);
+
+                    //check if it is updated successfully
+                    if (!updateResult)
+                        MessageBox.Show("Неуспешно маркиране, промените не са запазени!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                //otherwise => operation INSERT
+                else
+                {
+                    long PatientId = Convert.ToInt64(smsReportView.Rows[e.RowIndex].Cells["PatientId"].Value);
+                    long ExaminationId = Convert.ToInt64(smsReportView.Rows[e.RowIndex].Cells["ExaminationId"].Value);
+                    var ExaminationDate = DateTime.Parse(smsReportView.Rows[e.RowIndex].Cells["ExamDate"].Value.ToString(), CultureInfo.CurrentCulture);
+                    long? insertedId = notificationService.InsertNotification(PatientId, ExaminationId, ExaminationDate);
+                    if (insertedId == null || insertedId <= 0)
+                    {
+                        MessageBox.Show("Неуспешно маркиране, промените не са запазени!", "Грешка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        smsReportView.Rows[e.RowIndex].Cells["NotificationId"].Value = insertedId.Value.ToString();
+                    }
+                    
+                }
+
+               
             }
         }
     }

@@ -100,12 +100,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstraction\IExamination.cs" />
+    <Compile Include="Abstraction\INotification.cs" />
     <Compile Include="Abstraction\IPatient.cs" />
     <Compile Include="CabinetDataStoreContext\CabinetEntities.cs" />
     <Compile Include="Models\ExaminationsData.cs" />
+    <Compile Include="Models\NotificationsData.cs" />
     <Compile Include="Models\PatientsData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ExaminationService.cs" />
+    <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\PatientService.cs" />
   </ItemGroup>
   <ItemGroup>

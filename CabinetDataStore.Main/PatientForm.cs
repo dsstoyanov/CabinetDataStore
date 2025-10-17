@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace CabinetDataStore.Main
     {
         private readonly IPatient patientService;
         private readonly IExamination examinationService;
+        private readonly INotification notificationService;
         private DataTable dt = new DataTable();
         private DataTable dtExamination = new DataTable();
         public static bool useOldPrintVersion = false;
@@ -38,7 +40,7 @@ namespace CabinetDataStore.Main
             txtEmail.Text = model.EmailAddress;
         }
 
-        public PatientForm(IPatient patientService, IExamination examinationService)
+        public PatientForm(IPatient patientService, IExamination examinationService, INotification notificationService)
         {
             InitializeComponent();
             refreshTimer.Start();
@@ -46,6 +48,7 @@ namespace CabinetDataStore.Main
             
             this.patientService = patientService;
             this.examinationService = examinationService;
+            this.notificationService = notificationService;
             Logger.LoggerManager.Informational($"Load Patients form", this.GetType().Name);
         }
 
@@ -68,7 +71,9 @@ namespace CabinetDataStore.Main
             dt.Columns.Clear();
             dtExamination.Columns.Clear();
             dtFilterDate.Visible = false;
+            
             АutoCompleteInsert();
+
             използвайСтароПринтираеToolStripMenuItem.CheckState = CheckState.Unchecked;
 
             dt.Columns.Add("ID", typeof(int));
@@ -83,6 +88,7 @@ namespace CabinetDataStore.Main
             dtExamination.Columns.Add("Пациент", typeof(string));
             dtExamination.Columns.Add("Дата на прегледа", typeof(string));
             dtExamination.Columns.Add("Пациент ID", typeof(string));
+            dtExamination.Columns.Add("Известие", typeof(bool));
 
 
             RefreshDailyExaminations();
@@ -99,17 +105,19 @@ namespace CabinetDataStore.Main
             {
                 foreach (var exam in examinations)
                 {
-                    var patient = patientService.GetPatientById(exam.PatientId);
                     dtExamination.Rows.Add(new object[]
                         {
                             exam.ExaminationID,
-                            patient.PatientName,
+                            exam.Patient?.PatientName,
                             exam.ExaminationDate,
-                            patient.PatientId
+                            exam.Patient?.PatientId,
+                            exam.Notifications?.FirstOrDefault()?.isNotified ?? false
                         });
                 }
             }
             dgvDaily.DataSource = dtExamination;
+            dgvDaily.Columns["Известие"].Visible = false;
+            dgvDaily.Columns["Пациент ID"].Visible = false;
             //dgvAll.DataSource = dt;
         }
 
@@ -185,8 +193,7 @@ namespace CabinetDataStore.Main
         public void АutoCompleteInsert()
         {
             this.txtFilter.AutoCompleteCustomSource = null;
-            var dbpatients = patientService.GetAllPatients();
-            var patients = dbpatients.Select(x => x.PatientName).ToArray();
+            var patients = patientService.GetAllPatients();
 
             this.txtFilter.AutoCompleteSource = AutoCompleteSource.CustomSource;
             this.txtFilter.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -300,28 +307,25 @@ namespace CabinetDataStore.Main
             if (e.RowIndex != -1)
             {
                 long ExaminationId = 0;
-                var patient = patientService.GetPatientById(Convert.ToInt64(dgvDaily.Rows[e.RowIndex].Cells[3].Value));
+                //var patient = patientService.GetPatientById(Convert.ToInt64(dgvDaily.Rows[e.RowIndex].Cells[3].Value));
 
                 ExaminationId = Convert.ToInt32(dgvDaily.Rows[e.RowIndex].Cells[0].Value);
 
                 var examination = examinationService.GetExaminationById(ExaminationId);
                 dt.Clear();
 
-                ExaminationsForm f = new ExaminationsForm(patient, examination, patientService, examinationService, true);
+                ExaminationsForm f = new ExaminationsForm(examination.Patient, examination, patientService, examinationService, true);
                 f.ShowDialog();
             }
         }
 
         private void dgvAll_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //List<PatientModel> patients = new List<PatientModel>();
             dt.Clear();
             dgvAll.DataSource = dt;
-            long PatientId = 0;
             long ExaminationId = 0;
             var patient = patientService.GetPatientById(int.Parse(pID.Text));
             patient.Examinations = examinationService.GetAllExaminationsByPatientID(patient.PatientId);
-            //dtExamination.Clear();
             foreach (var examination in patient.Examinations)
             {
                 dt.Rows.Add(new object[] { examination.ExaminationID, patient.PatientName, examination.ExaminationDate, patient.PhoneNumber, patient.EmailAddress, AgeCalculator(examination.ExaminationDate, patient.BirthDate), patient.Examinations.Count() });
@@ -330,11 +334,9 @@ namespace CabinetDataStore.Main
             dgvAll.Focus();
             if (e.RowIndex != -1)
             {
-                PatientId = patient.PatientId;
                 ExaminationId = Convert.ToInt32(dgvAll.Rows[e.RowIndex].Cells[0].Value);
-                var patientById = patientService.GetPatientById(PatientId);
                 var examination = examinationService.GetExaminationById(ExaminationId);
-                ExaminationsForm f = new ExaminationsForm(patient, examination, patientService, examinationService, true);
+                ExaminationsForm f = new ExaminationsForm(examination.Patient, examination, patientService, examinationService, true);
                 f.ShowDialog();
             }
         }
@@ -490,19 +492,28 @@ namespace CabinetDataStore.Main
         {
             var dateToPick = pickExam.Value;
             dtExamination.Clear();
+            if (DateTime.Now.Year != dateToPick.Year || DateTime.Now.Month != dateToPick.Month)
+            {
+                dgvDaily.Columns["Известие"].Visible = true;
+            }
+            else
+            {
+                dgvDaily.Columns["Известие"].Visible = false;
+            }
 
             var examinations = examinationService.GetExaminationsByDate(dateToPick);
             if (examinations.Count != 0 || examinations.Count > 0)
             {
                 foreach (var exam in examinations)
                 {
-                    var patient = patientService.GetPatientById(exam.PatientId);
+                    //var patient = patientService.GetPatientById(exam.PatientId);
                     dtExamination.Rows.Add(new object[]
                         {
                             exam.ExaminationID,
-                            patient.PatientName,
+                            exam.Patient?.PatientName,
                             exam.ExaminationDate,
-                            patient.PatientId
+                            exam.Patient?.PatientId,
+                            exam.Notifications?.FirstOrDefault()?.isNotified ?? false
                         });
                 }
             }
@@ -559,7 +570,7 @@ namespace CabinetDataStore.Main
 
         private void sMSИзвестияToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            SMSReportForm smsReportForm = new SMSReportForm(patientService, examinationService);
+            SMSReportForm smsReportForm = new SMSReportForm(patientService, examinationService, notificationService);
             smsReportForm.ShowDialog();
         }
     }

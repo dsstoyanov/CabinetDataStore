@@ -15,6 +15,7 @@ namespace CabinetDataStore.Main.AppStart
         {
             Bind<IPatient>().To<PatientService>();
             Bind<IExamination>().To<ExaminationService>();
+            Bind<INotification>().To<NotificationService>();
         }
     }
 }

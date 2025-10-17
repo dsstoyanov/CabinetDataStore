@@ -30,6 +30,7 @@ namespace CabinetDataStore.Main
 
             IPatient patients = kernel.Get<IPatient>();
             IExamination examinations = kernel.Get<IExamination>();
+            INotification notifications = kernel.Get<INotification>();
 
             string logFolder = string.Empty;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
@@ -45,7 +46,7 @@ namespace CabinetDataStore.Main
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PatientForm(patients, examinations));
+            Application.Run(new PatientForm(patients, examinations, notifications));
         }
     }
 }
