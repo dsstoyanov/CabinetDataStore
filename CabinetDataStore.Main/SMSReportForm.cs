@@ -85,11 +85,11 @@ namespace CabinetDataStore.Main
                 foreach (var exam in examinations)
                 {
                     var notif = exam.Notifications?.FirstOrDefault(); // cache once to avoid double lookup
-
+                    
                     smsReportView.Rows.Add(new object[]
                     {
                         notif?.NotificationId.ToString() ?? "",
-                        DateTime.Parse(exam.ExaminationDate.ToString(),CultureInfo.CurrentCulture),
+                        exam.ExaminationDate.ToString(CultureInfo.InvariantCulture),
                         exam.Patient?.PatientName ?? "",
                         exam.Patient?.PhoneNumber ?? "",
                         notif?.isNotified ?? false,
