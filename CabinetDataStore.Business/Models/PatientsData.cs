@@ -14,6 +14,7 @@ namespace CabinetDataStore.Business.Models
         PatientsData()
         {
             this.Examinations = new HashSet<ExaminationsData>();
+            this.Notifications = new HashSet<NotificationsData>();
         }
         [Key]
         public long PatientId { get; set; }
@@ -27,5 +28,6 @@ namespace CabinetDataStore.Business.Models
         public string email { get; set; }
 
         public virtual ICollection<ExaminationsData> Examinations { get; set; }
+        public virtual ICollection<NotificationsData> Notifications { get; set; }
     }
 }

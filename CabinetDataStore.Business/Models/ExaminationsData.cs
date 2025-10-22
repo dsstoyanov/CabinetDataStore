@@ -11,6 +11,11 @@ namespace CabinetDataStore.Business.Models
     [Table("ExaminationsData", Schema = "public")]
     public class ExaminationsData
     {
+        public ExaminationsData()
+        {
+            this.Notifications = new HashSet<NotificationsData>();
+        }
+
         [Key]
         public long ExaminationId { get; set; }
         public long PatientId { get; set; }
@@ -29,6 +34,8 @@ namespace CabinetDataStore.Business.Models
         public string Recommendations { get; set; }
         public string Diagnosis { get; set; }
         public byte[] Picture { get; set; }
-        
+
+        public virtual PatientsData Patient { get; set; }
+        public virtual ICollection<NotificationsData> Notifications { get; set; }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CabinetDataStore.BusinessService.NotificationModels;
+using CabinetDataStore.BusinessService.PatientModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,11 @@ namespace CabinetDataStore.BusinessService.ExaminationModels
 {
     public class ExaminationModel
     {
+        public ExaminationModel()
+        {
+            this.Notifications = new HashSet<NotificationModel>();
+        }
+
         public long ExaminationID { get; set; }
 
         public long PatientId { get; set; }
@@ -41,5 +48,8 @@ namespace CabinetDataStore.BusinessService.ExaminationModels
         public string Diagnosis { get; set; }
 
         public byte[] Photo { get; set; }
+
+        public PatientModel Patient { get; set; }
+        public ICollection<NotificationModel> Notifications { get; set; }
     }
 }

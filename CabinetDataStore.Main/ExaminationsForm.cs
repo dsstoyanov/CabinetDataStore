@@ -356,7 +356,6 @@ namespace CabinetDataStore.Main
             g.DrawImage(CabinetDataStore.Main.Properties.Resources.full_header_2025, loc);
 
             Point loc1 = new Point(10, 170);
-            // g.DrawImage(CabinetDataStore.Main.Properties.Resources.anetka2_2025, loc1);
 
             Point loc2 = new Point(40, 695);
             Image im = picColposcopy.Image;
@@ -368,18 +367,19 @@ namespace CabinetDataStore.Main
             }
 
             // Draw the header fields
-          
+
+            // дата на прегледа
+            g.DrawString("Дата/час:", font, brush, new Rectangle(30, 250, 100, 30));
+            g.DrawString(FormatExaminationDate(Convert.ToDateTime(txtExamDate.Text)), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(95, 250, 550, 40));
+            //g.DrawString(FormatExaminationDate(Examination.ExaminationDate), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(95, 250, 550, 40));
+
             // имена
-            g.DrawString(label2.Text + ":", font, brush, new Rectangle(30, 250, 100, 30));
-            //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
-            //g.FillRectangle(brush, 95, 245, 375, 20);
-            g.DrawString(printName, new Font("Arial", 12, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 249, 370, 20));
+            g.DrawString(label2.Text + ":", font, brush, new Rectangle(310, 250, 100, 30));
+            g.DrawString(printName, new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(380, 249, 370, 20));
 
             // телефон
-            g.DrawString("Телефон:", font, brush, new Rectangle(30, 275, 100, 30));
-            //g.DrawRectangle(Pens.Black, 450, 247, 295, 20);
-            //g.FillRectangle(brush, 95, 270, 185, 20);
-            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(100, 274, 170, 20));
+            g.DrawString("Телефон:", font, brush, new Rectangle(310, 275, 100, 30));
+            g.DrawString(FormatPhoneNumber(Patient.PhoneNumber), new Font("Arial", 10, FontStyle.Underline), new SolidBrush(Color.Navy), new Rectangle(380, 274, 170, 20));
 
             // Анамнеза Section
             g.DrawString("Анамнеза", sectionName, brush, new Rectangle(30, 300, 230, 40));
@@ -390,12 +390,10 @@ namespace CabinetDataStore.Main
             g.DrawString(Convert.ToDateTime(dtpPRM.Text).Year < 1900 ? "N/A" : dtpPRM.Text, datas, defaultBrush, new Rectangle(100, 347, 130, 20));
 
             g.DrawString("Раждания", label, defaultBrush, new Rectangle(240, 330, 130, 20));
-            //g.DrawRectangle(Pens.Black, 120, 360, 140, 20);
             g.FillRectangle(defaultBrush, 240, 345, 140, 1);
             g.DrawString(txtBirths.Text + $" ({getBirthsString(txtBirths.Text, out int diff)})", datas, defaultBrush, new Rectangle(310 + diff, 347, 130, 20));
 
             g.DrawString("Операции", label, defaultBrush, new Rectangle(40, 390, 350, 20));
-            //g.DrawRectangle(Pens.Black, 40, 407, 350, 120);
             g.FillRectangle(defaultBrush, 40, 405, 340, 1);
             g.DrawString(txtOperations.Text, datas, defaultBrush, new Rectangle(40, 407, 350, 120));
 
@@ -404,31 +402,26 @@ namespace CabinetDataStore.Main
             g.FillRectangle(brush, 420, 320, 350, 3);
 
             g.DrawString("Болка", label, defaultBrush, new Rectangle(430, 330, 350, 20));
-            //g.DrawRectangle(Pens.Black, 310, 345, 445, 40);
             g.FillRectangle(defaultBrush, 430, 345, 340, 1);
             g.DrawString(txtPain.Text, datas, defaultBrush, new Rectangle(430, 347, 340, 40));
 
             g.DrawString("Кръвене", label, defaultBrush, new Rectangle(430, 390, 350, 20));
-            //g.DrawRectangle(Pens.Black, 310, 405, 445, 40);
             g.FillRectangle(defaultBrush, 430, 405, 340, 1);
             g.DrawString(txtBleeding.Text, datas, defaultBrush, new Rectangle(430, 407, 340, 40));
 
             g.DrawString("Флуор", label, defaultBrush, new Rectangle(430, 450, 340, 20));
-            //g.DrawRectangle(Pens.Black, 310, 465, 445, 40);
             g.FillRectangle(defaultBrush, 430, 465, 340, 1);
             g.DrawString(txtFluorine.Text, datas, defaultBrush, new Rectangle(430, 467, 340, 20));
 
             if (txtOther.Text.Length < 42)
             {
                 g.DrawString("Други", label, defaultBrush, new Rectangle(430, 510, 340, 20));
-                //g.DrawRectangle(Pens.Black, 310, 525, 445, 40);
                 g.FillRectangle(defaultBrush, 430, 525, 340, 1);
                 g.DrawString(txtOther.Text, datas, defaultBrush, new Rectangle(430, 527, 340, 20));
             }
             else
             {
                 g.DrawString("Други", label, defaultBrush, new Rectangle(430, 490, 340, 20));
-                //g.DrawRectangle(Pens.Black, 310, 525, 445, 40);
                 g.FillRectangle(defaultBrush, 430, 505, 340, 1);
                 g.DrawString(txtOther.Text, datas, defaultBrush, new Rectangle(430, 507, 340, 60));
             }
@@ -438,7 +431,6 @@ namespace CabinetDataStore.Main
             g.FillRectangle(brush, 30, 580, 740, 3);
 
             g.DrawString("Колпоскопия", label, defaultBrush, new Rectangle(40, 590, 80, 20));
-            //g.DrawRectangle(Pens.Black, 40, 545, 340, 70);
             g.FillRectangle(defaultBrush, 40, 605, 340, 1);
             g.DrawString(txtColposcopy.Text, datas, defaultBrush, new Rectangle(40, 607, 340, 70));
 
@@ -446,34 +438,28 @@ namespace CabinetDataStore.Main
             g.FillRectangle(defaultBrush, 40, 695, 340, 1);
 
             g.DrawString("Ехография", label, defaultBrush, new Rectangle(410, 590, 80, 20));
-            //g.DrawRectangle(Pens.Black, 410, 545, 340, 70);
             g.FillRectangle(defaultBrush, 410, 605, 360, 1);
             g.DrawString(txtEchography.Text, datas, defaultBrush, new Rectangle(410, 607, 360, 70));
 
             g.DrawString("Диагноза", label, defaultBrush, new Rectangle(410, 680, 80, 20));
-            //g.DrawRectangle(Pens.Black, 410, 635, 340, 90);
             g.FillRectangle(defaultBrush, 410, 695, 360, 1);
             g.DrawString(txtDiagnosis.Text, datas, defaultBrush, new Rectangle(410, 697, 360, 80));
 
             g.DrawString("Резултати от изследвания", label, defaultBrush, new Rectangle(410, 790, 200, 20));
-            //g.DrawRectangle(Pens.Black, 410, 745, 340, 90);
             g.FillRectangle(defaultBrush, 410, 805, 360, 1);
             g.DrawString(txtResults.Text, datas, defaultBrush, new Rectangle(410, 807, 360, 110));
 
             // Терапия Section
             g.DrawString("Терапия", sectionName, brush, new Rectangle(30, 920, 230, 40));
             g.FillRectangle(brush, 30, 940, 370, 3);
-            //g.DrawRectangle(Pens.Black, 25, 950, 350, 100);
             g.DrawString(txtTherapy.Text, datas, defaultBrush, new Rectangle(30, 952, 370, 120));
 
             // Препоръки Section
             g.DrawString("Препоръки", sectionName, brush, new Rectangle(420, 920, 230, 40));
             g.FillRectangle(brush, 420, 940, 370, 3);
-            //g.DrawRectangle(Pens.Black, 415, 950, 350, 100);
             g.DrawString(txtRecommendations.Text, datas, defaultBrush, new Rectangle(420, 952, 370, 120));
 
-            // дата на прегледа
-            g.DrawString(FormatExaminationDate(Examination.ExaminationDate), footer, footerBrush, new Rectangle(40, 1080, 550, 40));
+            
 
             g.DrawString($"Проф. Явор Корновски | © {DateTime.Now.Year.ToString()}", footer, footerBrush, new Rectangle(600, 1080, 550, 40));
             
@@ -1039,7 +1025,7 @@ namespace CabinetDataStore.Main
         {
             CultureInfo bg = new CultureInfo("bg-BG");
 
-            string examDateFormatted = Examination.ExaminationDate.ToString("d MMMM yyyy'г' HH:mm:ss", bg);
+            string examDateFormatted = examinationDate.ToString("d MMMM yyyy HH:mm:ss", bg);
             return examDateFormatted;
         }
     }

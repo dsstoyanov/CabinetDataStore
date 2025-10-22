@@ -2,6 +2,7 @@
 using CabinetDataStore.Business;
 using CabinetDataStore.Business.Models;
 using CabinetDataStore.BusinessService.ExaminationModels;
+using CabinetDataStore.BusinessService.NotificationModels;
 using CabinetDataStore.BusinessService.PatientModels;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace CabinetDataStore.Main.AppStart
             {
                 cfg.AddProfile<PatientsProfile>();
                 cfg.AddProfile<ExaminationsProfile>();
+                cfg.AddProfile<NotificationsProfile>();
             });
         }
 
@@ -27,17 +29,19 @@ namespace CabinetDataStore.Main.AppStart
             public PatientsProfile()
             {
                 CreateMap<PatientsData, PatientModel>()
-                    .ForMember(dest=>dest.PhoneNumber, opt=>opt.MapFrom(src=>src.PhoneNumber))
+                    .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
                     .ForMember(dest => dest.BirthDate, opt => opt.MapFrom(src => src.BirthDay))
                     .ForMember(dest => dest.EmailAddress, opt => opt.MapFrom(src => src.email))
-                    .ForMember(dest => dest.Examinations, opt => opt.MapFrom(src => src.Examinations));
+                    .ForMember(dest => dest.Examinations, opt => opt.MapFrom(src => src.Examinations))
+                    .ForMember(dest => dest.Notifications, opt => opt.MapFrom(src => src.Notifications));
 
                CreateMap<PatientModel, PatientsData>()
                     .ForMember(dest=>dest.PatientName, opt=>opt.MapFrom(src=>src.PatientName))
                     .ForMember(dest => dest.PhoneNumber, opt => opt.MapFrom(src => src.PhoneNumber))
                     .ForMember(dest => dest.BirthDay, opt => opt.MapFrom(src => src.BirthDate))
                     .ForMember(dest => dest.email, opt => opt.MapFrom(src => src.EmailAddress))
-                    .ForMember(dest => dest.Examinations, opt => opt.MapFrom(src => src.Examinations));
+                    .ForMember(dest => dest.Examinations, opt => opt.MapFrom(src => src.Examinations))
+                    .ForMember(dest => dest.Notifications, opt => opt.MapFrom(src => src.Notifications));
             }
            
         }
@@ -49,6 +53,7 @@ namespace CabinetDataStore.Main.AppStart
                 CreateMap<ExaminationsData, ExaminationModel>()
                    .ForMember(dest => dest.ExaminationID, opt => opt.MapFrom(src => src.ExaminationId))
                    .ForMember(dest => dest.PatientId, opt => opt.MapFrom(src => src.PatientId))
+                   .ForMember(dest => dest.Patient, opt => opt.MapFrom(src => src.Patient))
                    .ForMember(dest => dest.ExaminationDate, opt => opt.MapFrom(src => src.ExaminationDate))
                    .ForMember(dest => dest.PRM, opt => opt.MapFrom(src => src.PRM))
                    .ForMember(dest => dest.BirthsCount, opt => opt.MapFrom(src => src.Births))
@@ -63,11 +68,13 @@ namespace CabinetDataStore.Main.AppStart
                    .ForMember(dest => dest.Therapy, opt => opt.MapFrom(src => src.Therapy))
                    .ForMember(dest => dest.Recommendations, opt => opt.MapFrom(src => src.Recommendations))
                    .ForMember(dest => dest.Diagnosis, opt => opt.MapFrom(src => src.Diagnosis))
-                   .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Picture));
+                   .ForMember(dest => dest.Photo, opt => opt.MapFrom(src => src.Picture))
+                   .ForMember(dest => dest.Notifications, opt => opt.MapFrom(src => src.Notifications));
 
                 CreateMap<ExaminationModel, ExaminationsData>()
                    .ForMember(dest => dest.ExaminationId, opt => opt.Ignore())
                    .ForMember(dest => dest.PatientId, opt => opt.MapFrom(src => src.PatientId))
+                   .ForMember(dest => dest.Patient, opt => opt.MapFrom(src => src.Patient))
                    .ForMember(dest => dest.ExaminationDate, opt => opt.MapFrom(src => src.ExaminationDate))
                    .ForMember(dest => dest.PRM, opt => opt.MapFrom(src => src.PRM))
                    .ForMember(dest => dest.Births, opt => opt.MapFrom(src => src.BirthsCount))
@@ -82,7 +89,30 @@ namespace CabinetDataStore.Main.AppStart
                    .ForMember(dest => dest.Therapy, opt => opt.MapFrom(src => src.Therapy))
                    .ForMember(dest => dest.Recommendations, opt => opt.MapFrom(src => src.Recommendations))
                    .ForMember(dest => dest.Diagnosis, opt => opt.MapFrom(src => src.Diagnosis))
-                   .ForMember(dest => dest.Picture, opt => opt.MapFrom(src => src.Photo));
+                   .ForMember(dest => dest.Picture, opt => opt.MapFrom(src => src.Photo))
+                   .ForMember(dest => dest.Notifications, opt => opt.MapFrom(src => src.Notifications));
+            }
+        }
+
+        public class NotificationsProfile : Profile
+        {
+            public NotificationsProfile()
+            {
+                CreateMap<NotificationsData, NotificationModel>()
+                    .ForMember(dest => dest.NotificationId, opt => opt.MapFrom(src => src.NotificationId))
+                    .ForMember(dest => dest.ExaminationId, opt => opt.MapFrom(src => src.ExaminationId))
+                    .ForMember(dest => dest.PatientId, opt => opt.MapFrom(src => src.PatientId))
+                    .ForMember(dest => dest.ExaminationDate, opt => opt.MapFrom(src => src.ExaminationDate))
+                    .ForMember(dest => dest.NotificationDate, opt => opt.MapFrom(src => src.NotificationDate))
+                    .ForMember(Dest => Dest.isNotified, opt => opt.MapFrom(src => src.isNotified));
+
+                CreateMap<NotificationModel, NotificationsData>()
+                    .ForMember(dest => dest.NotificationId, opt => opt.Ignore())
+                    .ForMember(dest => dest.ExaminationId, opt => opt.MapFrom(src => src.ExaminationId))
+                    .ForMember(dest => dest.PatientId, opt => opt.MapFrom(src => src.PatientId))
+                    .ForMember(dest => dest.ExaminationDate, opt => opt.MapFrom(src => src.ExaminationDate))
+                    .ForMember(dest => dest.NotificationDate, opt => opt.MapFrom(src => src.NotificationDate))
+                    .ForMember(Dest => Dest.isNotified, opt => opt.MapFrom(src => src.isNotified));
             }
         }
     }

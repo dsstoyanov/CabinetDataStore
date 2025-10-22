@@ -10,7 +10,7 @@ namespace CabinetDataStore.Business.Abstraction
 {
     public interface IPatient
     {
-        List<PatientModel> GetAllPatients();
+        string[] GetAllPatients();
 
         List<PatientModel> GetPatientByFilter(SearchTypes srchType, object value);
 

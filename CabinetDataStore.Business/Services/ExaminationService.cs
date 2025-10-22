@@ -13,6 +13,8 @@ using Logger;
 using System.Security.Cryptography.X509Certificates;
 using System.Data.Entity;
 using System.Linq.Expressions;
+using CabinetDataStore.BusinessService.NotificationModels;
+using System.Diagnostics;
 
 namespace CabinetDataStore.Business.Services
 {
@@ -43,7 +45,10 @@ namespace CabinetDataStore.Business.Services
             {
                 using (CabinetEntities context = new CabinetEntities())
                 {
-                    var Examinations = context.ExaminationsData.Where(x => x.ExaminationDate.Day == DateTime.Now.Day && x.ExaminationDate.Month == DateTime.Now.Month && x.ExaminationDate.Year == DateTime.Now.Year).ToList();
+                    var Examinations = context.ExaminationsData
+                        .Include(x => x.Patient)
+                        .Where(x => x.ExaminationDate.Day == DateTime.Now.Day && x.ExaminationDate.Month == DateTime.Now.Month && x.ExaminationDate.Year == DateTime.Now.Year)
+                        .ToList();
                     
                     return Mapper.Map<List<ExaminationModel>>(Examinations);
                 }
@@ -60,7 +65,10 @@ namespace CabinetDataStore.Business.Services
         {
             using (CabinetEntities context = new CabinetEntities())
             {
-                var Examinations = context.ExaminationsData.Where(x => x.ExaminationId == examinationId).FirstOrDefault();
+                var Examinations = context.ExaminationsData
+                    .Include(x=>x.Patient)
+                    .Where(x => x.ExaminationId == examinationId)
+                    .FirstOrDefault();
 
                 return Mapper.Map<ExaminationModel>(Examinations);
             }
@@ -151,7 +159,10 @@ namespace CabinetDataStore.Business.Services
             {
                 using (CabinetEntities context = new CabinetEntities())
                 {
-                    var examinations = context.ExaminationsData.Where(x => DbFunctions.TruncateTime(x.ExaminationDate) == date.Date).ToList();
+                    var examinations = context.ExaminationsData
+                        .Include(x => x.Patient)
+                        .Where(x => DbFunctions.TruncateTime(x.ExaminationDate) == date.Date)
+                        .ToList();
 
                     return Mapper.Map<List<ExaminationModel>>(examinations);
                 }
@@ -169,14 +180,67 @@ namespace CabinetDataStore.Business.Services
         {
             try
             {
-                using (CabinetEntities context = new CabinetEntities())
+                Stopwatch s = new Stopwatch();
+                s.Start();
+                using (var context = new CabinetEntities())
                 {
-                    var examinationsByTimeRange = context.ExaminationsData
-                        .Where(x => DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom && DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo)
-                        .Select(x=> new ExaminationModel { ExaminationID = x.ExaminationId, PatientId = x.PatientId, ExaminationDate = x.ExaminationDate, Diagnosis = x.Diagnosis})
+                    var examsInRange = context.ExaminationsData
+                        .AsNoTracking()
+                        .Where(x =>
+                            DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom &&
+                            DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo &&
+                            // ❗ Exclude patients who have later examinations
+                            !context.ExaminationsData
+                                .Any(y => y.PatientId == x.PatientId &&
+                                          DbFunctions.TruncateTime(y.ExaminationDate) > dateTo))
+                        .GroupBy(x => x.PatientId)
+                        .Select(g => g.OrderByDescending(x => x.ExaminationDate).FirstOrDefault())
+                        .Select(x => new
+                        {
+                            x.ExaminationId,
+                            x.ExaminationDate,
+                            x.PatientId,
+                            PatientName = x.Patient.PatientName,
+                            PhoneNumber = x.Patient.PhoneNumber,
+                            Notifications = x.Notifications.Select(n => new
+                            {
+                                n.NotificationId,
+                                n.isNotified
+                            }).ToList()
+                        }).ToList();
+
+                    Logger.LoggerManager.Informational($"[Step1] Get each patient's latest exam time: {s.ElapsedMilliseconds}ms");
+
+                    // Step 2: Filter out patients who have any exam *after* dateTo
+                    var finalList = examsInRange
+                        .Where(exam => !context.ExaminationsData.Any(
+                            e2 => e2.PatientId == exam.PatientId && e2.ExaminationDate > dateTo))
                         .ToList();
 
-                    return Mapper.Map<List<ExaminationModel>>(examinationsByTimeRange);
+                    Logger.LoggerManager.Informational($"[Step2] Filter out patients time: {s.ElapsedMilliseconds}ms");
+
+                    // Step 3: Map to your view models
+                    var result = examsInRange.Select(x => new ExaminationModel
+                    {
+                        ExaminationID = x.ExaminationId,
+                        ExaminationDate = x.ExaminationDate,
+                        Patient = new PatientModel
+                        {
+                            PatientId = Convert.ToInt32(x.PatientId),
+                            PatientName = x.PatientName,
+                            PhoneNumber = x.PhoneNumber
+                        },
+                        Notifications = x.Notifications.Select(n => new NotificationModel
+                        {
+                            NotificationId = n.NotificationId,
+                            isNotified = n.isNotified
+                        }).ToList()
+                    }).ToList();
+
+                    s.Stop();
+                    LoggerManager.Informational($"[GetExaminationsByTimeRange] executed time overall: {s.ElapsedMilliseconds}ms");
+
+                    return result;
                 }
             }
             catch (Exception ex)

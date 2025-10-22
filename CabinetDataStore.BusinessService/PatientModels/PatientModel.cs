@@ -1,4 +1,5 @@
 ﻿using CabinetDataStore.BusinessService.ExaminationModels;
+using CabinetDataStore.BusinessService.NotificationModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace CabinetDataStore.BusinessService.PatientModels
         public PatientModel()
         {
             this.Examinations = new HashSet<ExaminationModel>();
+            this.Notifications = new HashSet<NotificationModel>();
         }
         public int PatientId { get; set; }
 
@@ -24,5 +26,7 @@ namespace CabinetDataStore.BusinessService.PatientModels
         public string EmailAddress { get; set; }
 
         public ICollection<ExaminationModel> Examinations { get; set; }
+
+        public ICollection<NotificationModel> Notifications { get; set; }
     }
 }

@@ -15,9 +15,11 @@ namespace CabinetDataStore.Business.CabinetDataStoreContext
         
         public CabinetEntities() : base(connString)
         {
+            Database.SetInitializer<CabinetEntities>(null);
         }
        
         public virtual DbSet<PatientsData> PatientsData { get; set; }
         public virtual DbSet<ExaminationsData> ExaminationsData { get; set; }
+        public virtual DbSet<NotificationsData> NotificationsData { get; set; }
     }
 }
