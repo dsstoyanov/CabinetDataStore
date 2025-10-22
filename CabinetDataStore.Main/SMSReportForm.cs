@@ -247,7 +247,7 @@ namespace CabinetDataStore.Main
                 {
                     long PatientId = Convert.ToInt64(smsReportView.Rows[e.RowIndex].Cells["PatientId"].Value);
                     long ExaminationId = Convert.ToInt64(smsReportView.Rows[e.RowIndex].Cells["ExaminationId"].Value);
-                    var ExaminationDate = DateTime.Parse(smsReportView.Rows[e.RowIndex].Cells["ExamDate"].Value.ToString(), CultureInfo.CurrentCulture);
+                    var ExaminationDate = DateTime.Parse(smsReportView.Rows[e.RowIndex].Cells["ExamDate"].Value.ToString(), CultureInfo.InvariantCulture);
                     long? insertedId = notificationService.InsertNotification(PatientId, ExaminationId, ExaminationDate);
                     if (insertedId == null || insertedId <= 0)
                     {

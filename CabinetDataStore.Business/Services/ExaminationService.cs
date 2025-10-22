@@ -184,24 +184,29 @@ namespace CabinetDataStore.Business.Services
                 s.Start();
                 using (var context = new CabinetEntities())
                 {
-                    // Step 1: Get each patient's latest exam within the time range
-                    var examsInRange = context.ExaminationsData.AsNoTracking()
-                        .Where(x => 
-                                    DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom && 
-                                    DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo)
+                    var examsInRange = context.ExaminationsData
+                        .AsNoTracking()
+                        .Where(x =>
+                            DbFunctions.TruncateTime(x.ExaminationDate) >= dateFrom &&
+                            DbFunctions.TruncateTime(x.ExaminationDate) <= dateTo &&
+                            // ❗ Exclude patients who have later examinations
+                            !context.ExaminationsData
+                                .Any(y => y.PatientId == x.PatientId &&
+                                          DbFunctions.TruncateTime(y.ExaminationDate) > dateTo))
                         .GroupBy(x => x.PatientId)
                         .Select(g => g.OrderByDescending(x => x.ExaminationDate).FirstOrDefault())
-                        .Select(x => new {
-                                            x.ExaminationId,
-                                            x.ExaminationDate,
-                                            x.PatientId,
-                                            PatientName = x.Patient.PatientName,
-                                            PhoneNumber = x.Patient.PhoneNumber,
-                                            Notifications = x.Notifications.Select(n => new
-                                            {
-                                                n.NotificationId,
-                                                n.isNotified
-                                            }).ToList()
+                        .Select(x => new
+                        {
+                            x.ExaminationId,
+                            x.ExaminationDate,
+                            x.PatientId,
+                            PatientName = x.Patient.PatientName,
+                            PhoneNumber = x.Patient.PhoneNumber,
+                            Notifications = x.Notifications.Select(n => new
+                            {
+                                n.NotificationId,
+                                n.isNotified
+                            }).ToList()
                         }).ToList();
 
                     Logger.LoggerManager.Informational($"[Step1] Get each patient's latest exam time: {s.ElapsedMilliseconds}ms");
